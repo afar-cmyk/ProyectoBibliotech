@@ -7,10 +7,10 @@ app.use(cors());
 
 //conexion
 var conexion = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'bibliotech'
+    host: 'mysql-proyecto.alwaysdata.net',
+    user: 'proyecto',
+    password: 'ToBy456789RoGeR',
+    database: 'proyecto_bibliotech'
 });
 
 conexion.connect(function(error){
