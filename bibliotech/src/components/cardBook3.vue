@@ -32,3 +32,26 @@
     </b-modal>
   </div>
 </template>
+<style scoped>
+  .btn-secondary{
+      background-color: #485eb2 !important;
+      border: 1px solid #485eb2 !important;
+  }
+  /*Modal 1 solo cambia .modal-view*/
+  .modal-view{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+  }
+  /*Organización de los libros*/
+  .option-book{
+    margin-top: 1rem;
+  }
+  .option-book:hover{
+   background-color: #d6d6d669;
+  }
+  .img-option{
+    width: 50%;
+  }
+</style>

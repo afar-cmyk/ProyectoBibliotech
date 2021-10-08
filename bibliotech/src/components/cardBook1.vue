@@ -32,7 +32,7 @@
     </b-modal>
   </div>
 </template>
-<style>
+<style scoped>
   .btn-secondary{
       background-color: #485eb2 !important;
       border: 1px solid #485eb2 !important;
@@ -43,23 +43,6 @@
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
-  }
-  .modal-header{
-      background-color: #ff3000 !important;
-      border-bottom: none !important;
-  }
-  .close{
-      font-size: 2rem !important;
-      color: #FFF !important;
-      text-shadow: none !important;
-      opacity: none !important;
-      background-color: #ff6c38 !important;
-  }
-  .close:hover{
-    color: #001154 !important;
-  }
-  .modal-backdrop{
-    background-color: #FFF !important;
   }
   /*Organización de los libros*/
   .option-book{
