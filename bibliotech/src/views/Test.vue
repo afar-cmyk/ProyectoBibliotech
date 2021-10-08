@@ -1,6 +1,6 @@
 <template>
   <div>
-    <aside class="barra-lateral">
+    <aside class="d-flex flex-column barra-lateral">
       <barraNav />
     </aside>
   </div>
@@ -16,11 +16,6 @@ export default {
 </script>
 <style scoped>
 .barra-lateral {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: space-around;
   background-color: white;
   width: 16vw;
   height: 100vh;

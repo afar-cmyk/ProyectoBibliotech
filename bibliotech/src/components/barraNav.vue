@@ -1,21 +1,29 @@
 <template>
   <div>
     <!-- Grupo de elementos #1 -->
-    <div class="contenedor-header">
+    <div class="d-flex flex-column justify-content-around contenedor-header">
       <!-- Contenedor logo -->
       <div class="contenedor-header__logo">
         <img src="../assets/images/logo-minimal.png" alt="Logo Bibliotech" />
       </div>
 
       <!-- Contenedor de usuario actual -->
-      <div class="contenedor-header__usuario">
-        <div class="header__usuario">
+      <div
+        class="d-flex flex-column justify-content-around contenedor-header__usuario"
+      >
+        <div
+          class="d-flex justify-content-between align-items-center header__usuario"
+        >
           <!-- Nombre de usuario actual -->
-          <p class="usuario_titulo">Nombre de usuario</p>
+          <p class="d-flex usuario_titulo mb-0">
+            Nombre de usuario
+          </p>
 
           <!-- Tipo de usuario actual -->
           <div class="header__usuario-label">
-            <div class="header__usuario-label-texto">root</div>
+            <b-badge variant="warning" class="usuario-label-texto"
+              >Root</b-badge
+            >
           </div>
         </div>
       </div>
@@ -83,25 +91,17 @@
 <style scoped>
 /* Espacio para el logo y el nombre */
 .contenedor-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
   width: 100%;
   height: 9vw;
   border-bottom: 1px solid #0000001f;
 }
 
 .contenedor-header__logo {
-  /* background-color: rgba(0, 255, 200, 0.082); WIREFRAME*/
-
   width: 100%;
   height: 100%;
-  /* padding: 0.625rem; */
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   padding-top: 1.25rem;
-
   box-sizing: border-box;
 }
 
@@ -110,28 +110,15 @@
 }
 
 .contenedor-header__usuario {
-  /* background-color: crimson; WIREFRAME*/
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
   width: 100%;
   height: 2.5rem;
-
   padding-left: 0.625rem;
   padding-right: 0.625rem;
-
   box-sizing: border-box;
 }
 
 .header__usuario {
-  /* background-color: rgb(255, 0, 242); WIREFRAME*/
-
   padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   height: 1.25rem;
 }
@@ -139,21 +126,19 @@
 .usuario_titulo {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  margin-bottom: 0;
 }
 
 .header__usuario-label {
   background-color: #ffaa00 !important;
-
   display: inline-flex;
-
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
-.header__usuario-label-texto {
+.usuario-label-texto {
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
 }
 
 /* Primer cuerpo del menú */
