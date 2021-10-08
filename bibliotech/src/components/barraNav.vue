@@ -20,11 +20,8 @@
           </p>
 
           <!-- Tipo de usuario actual -->
-          <div class="header__usuario-label">
-            <b-badge variant="warning" class="usuario-label-texto"
-              >Root</b-badge
-            >
-          </div>
+          <labelRoot />
+          <!-- FIN Tipo de usuario actual -->
         </div>
       </div>
     </div>
@@ -90,6 +87,17 @@
   </div>
 </template>
 
+<script>
+import labelRoot from "../components/labelRoot.vue";
+import labelAdmin from "../components/labelAdmin.vue";
+export default {
+  components: {
+    labelRoot,
+    labelAdmin,
+  },
+};
+</script>
+
 <style scoped>
 /* Espacio para el logo y el nombre */
 .contenedor-header {
@@ -129,19 +137,6 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin-bottom: 0;
-}
-
-/* Identificador del usuario (Root o Admin) */
-.header__usuario-label {
-  background-color: #ffaa00 !important;
-  display: inline-flex;
-  border-radius: 4px;
-}
-
-.usuario-label-texto {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: #000000;
 }
 
 /* Primer cuerpo del menú */
