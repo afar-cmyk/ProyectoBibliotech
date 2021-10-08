@@ -22,7 +22,6 @@ Variaciones de transparencia:
     margin-top: -0.4%;
 }
 
-
 .lineTrade-container h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -82,11 +81,6 @@ Variaciones de transparencia:
     background-color: #F3F3F3;
     margin-top: 2rem;
     margin-bottom: 10rem;
-    padding: 1rem;
-}
-
-.row-books img{
-    margin: 0.7rem;
 }
 
 .row-books img:hover{
@@ -102,7 +96,7 @@ Variaciones de transparencia:
 }
 
 .data-book{
-    width: 80%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -123,31 +117,6 @@ Variaciones de transparencia:
     background-color: #ff3000;
     color: #fff;
     padding: 0rem;
-}
-
-/*Modal 1 solo cambia .modal-view*/
-.modal-view{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.modal-header{
-    background-color: #ff3000 !important;
-    border-bottom: none !important;
-}
-
-.close{
-    font-size: 2rem !important;
-    color: #FFF !important;
-    text-shadow: none !important;
-    opacity: none !important;
-    background-color: #ff6c38 !important;
-}
-
-.close:hover{
-    color: #001154 !important;
 }
 
 .info-book{

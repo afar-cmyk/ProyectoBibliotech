@@ -39,8 +39,6 @@
         <b-col cols="1" class="orange-3"></b-col>
         <b-col cols="1" class="orange-4"></b-col>
       </b-row>
-
     </b-container>
-    
   </div>
 </template>

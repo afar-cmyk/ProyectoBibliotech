@@ -39,7 +39,7 @@ export default {
   },
   data() { //Lista búsqueda de categorias de libros disponibles
     return {
-      books: ["Digital", "Ilustración", "Manual", "Revista", "Académico"],
+      books: ["Académico", "Digital", "Ilustración", "Manual", "Revista"],
     };
   },
 };
