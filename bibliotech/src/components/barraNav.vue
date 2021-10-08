@@ -31,14 +31,14 @@
     <!-- FIN Grupo de elementos #1 -->
 
     <!-- Grupo de elementos #2 -->
-    <div class="contenedor-body-1">
+    <div class=" contenedor-body-1">
       <!-- Primer elemento de la barra lateral -->
       <div class="contenedor-barra-1" onclick="javascript:enlaceRecientes();">
         <div class="elemento-1">
           <div class="elemento-1__icono">
             <span class="material-icons material-icons--settings">restore</span>
           </div>
-          <p class="elemento-1__titulo ">Recientes</p>
+          <p class="elemento-1__titulo mb-0">Recientes</p>
         </div>
       </div>
 
@@ -53,7 +53,9 @@
               >import_contacts</span
             >
           </div>
-          <p class="elemento-1__titulo elemento-1__titulo--actual">Artículos</p>
+          <p class="mb-0 elemento-1__titulo elemento-1__titulo--actual">
+            Artículos
+          </p>
         </div>
       </div>
 
@@ -66,7 +68,7 @@
           <div class="elemento-1__icono">
             <span class="material-icons material-icons--settings">group</span>
           </div>
-          <p class="elemento-1__titulo">Administradores</p>
+          <p class="mb-0 elemento-1__titulo">Administradores</p>
         </div>
       </div>
     </div>
@@ -80,7 +82,7 @@
           <div class="elemento-1__icono">
             <span class="material-icons material-icons--settings">logout</span>
           </div>
-          <p class="elemento-1__titulo">Salir</p>
+          <p class="mb-0 elemento-1__titulo">Salir</p>
         </div>
       </div>
     </div>
@@ -129,6 +131,7 @@
   margin-bottom: 0;
 }
 
+/* Identificador del usuario (Root o Admin) */
 .header__usuario-label {
   background-color: #ffaa00 !important;
   display: inline-flex;
@@ -143,8 +146,6 @@
 
 /* Primer cuerpo del menú */
 .contenedor-body-1 {
-  /* background-color: rgba(0, 0, 0, 0.082); WIREFRAME*/
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
