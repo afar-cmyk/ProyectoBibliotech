@@ -92,7 +92,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 .rows-news{
     background-color: #f3f3f3 !important;
 }
@@ -116,5 +116,12 @@ export default {
 }
 .news2-text{
     border: none !important;
+}
+.btn-secondary{
+    background-color: #485eb2 !important;
+    border: 1px solid #485eb2 !important;
+}
+.modal-backdrop{
+    background-color: #FFF !important;
 }
 </style>
