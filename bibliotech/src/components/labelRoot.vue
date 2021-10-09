@@ -1,6 +1,6 @@
 <template>
   <div class="header__usuario-label">
-    <b-badge variant="warning" class="usuario-label-texto">Root</b-badge>
+    <b-badge class="usuario-label-texto">Root</b-badge>
   </div>
 </template>
 <style scoped>
