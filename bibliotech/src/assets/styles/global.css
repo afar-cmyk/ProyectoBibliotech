@@ -2,3 +2,5 @@
 @import "style-trade.css";
 @import "style-about.css";
 @import "style-team.css";
+@import "../styles/sideBar/sections.css";
+@import "../styles/sideBar/active-section.css"

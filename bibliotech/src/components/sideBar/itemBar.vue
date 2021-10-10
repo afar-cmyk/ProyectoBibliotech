@@ -1,73 +1,24 @@
 <template>
     <!-- Segundo elemento de la barra lateral -->
       <div
-        class="contenedor-barra-2"
+        class="contenedor-barra"
         onclick="javascript:enlaceArticulos();"
       >
-        <div class="elemento-1">
-          <div class="elemento-1__icono">
-            <span class="material-icons"
+        <div class="sideBar_elemento">
+          <div class="sideBar_elemento__icono">
+            <span class="material-icons material-icons--settings"
               >import_contacts</span
             >
           </div>
-          <p class="mb-0 elemento-1__titulo">
+          <p class="mb-0 sideBar_elemento__titulo">
             Artículos
           </p>
         </div>
       </div>
 </template>
+<script>
 
+</script>
 <style scoped>
-/* Primera Sección */
-.contenedor-barra-2 {
-  /* background-color: crimson;  WIREFRAME*/
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  width: 100%;
-  height: 2.5rem;
-
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-
-  box-sizing: border-box;
-
-  /*border-radius: 4px;*/
-}
-
-/* Primera Sección - elemento*/
-.elemento-1 {
-  /* background-color: rgb(255, 0, 242); WIREFRAME*/
-
-  padding: 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 1.25rem;
-}
-
-/* Primera Sección - icono*/
-.elemento-1__icono {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-
-  margin-right: 1.5rem;
-}
-
-.elemento-1__titulo {
-  color: #828282;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 300;
-  letter-spacing: 0.2px;
-}
-.contenedor-barra-2:hover {
-  background-color: #00000009;
-  border-radius: 4px;
-  cursor: pointer;
-}
 </style>

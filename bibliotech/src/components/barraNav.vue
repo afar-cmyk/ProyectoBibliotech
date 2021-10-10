@@ -29,12 +29,15 @@
 
     <!-- Grupo de elementos #2 -->
     <div class=" contenedor-body-1">
-      <newerBar />
-
-      <itemBar />
-
-      <adminBar />
-
+      <a @click="changeOption(1)" >
+        <navItem :status="option == 1 ? true : false" title="Recientes" icon="restore"/>  
+      </a>
+      <a @click="changeOption(2)">
+        <navItem :status="option == 2 ? true : false" title="Artículos" icon="import_contacts"/>
+      </a>
+      <a @click="changeOption(3)">
+        <navItem :status="option == 3 ? true : false" title="Administradores" icon="group"/>
+      </a>     
     </div>
     <!-- FIN Grupo de elementos #2 -->
 
@@ -50,21 +53,33 @@
 // Labels //
 import labelRoot from "../components/labelRoot.vue"
 import labelAdmin from "../components/labelAdmin.vue"
-// Elementos de la barra de navegación //
-import newerBar from "../components/sideBar/newerBar.vue"
+import navItem from "../components/sideBar/navItem.vue"
 import itemBar from "../components/sideBar/itemBar.vue"
 import adminBar from "../components/sideBar/adminBar.vue"
 import logoutBar from "../components/sideBar/logoutBar.vue"
+import NewerBar from "@/components/sidebar/NewerBar.vue"
 
 export default {
   components: {
     labelRoot,
     labelAdmin,
-    newerBar,
+    NewerBar,
     itemBar,
     adminBar,
-    logoutBar
+    logoutBar,
+    navItem
   },
+  data() {
+    return {
+      option: 1
+    }
+  },
+  methods: {
+    changeOption(i) {
+      this.option = i
+      console.log(i)
+    }
+  }
 };
 </script>
 
@@ -108,74 +123,27 @@ export default {
   font-weight: 400;
   margin-bottom: 0;
 }
-
-/* Primer cuerpo del menú */
+/* Primera cuerpo del menú */
 .contenedor-body-1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
   width: 100%;
   height: 10rem;
-
   padding-left: 0.625rem;
   padding-right: 0.625rem;
-
   border-bottom: 1px solid #0000001f;
-
   box-sizing: border-box;
 }
-
-/* Borde gris al pasar el mouse por encima del menú*/
-.contenedor-barra-1:hover {
-  background-color: #00000009;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-
-
-.contenedor-barra-3:hover {
-  background-color: #00000009;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* <-----------------------------------> */
-
-/* Seleccion actual en la barra de menú */
-.contenedor-barra-1--actual {
-  background-color: #ffe6e0 !important;
-  border-radius: 4px;
-}
-
-.elemento-1__titulo--actual {
-  color: #ff3000;
-  font-weight: 400;
-}
-
-.material-icons--settings-actual {
-  color: #ff3000;
-}
-
-/* <-----------------------------------> */
-
-
 /* Segunda sección del menú */
-
 .contenedor-body-2 {
-  /* background-color: rgba(8, 43, 243, 0.082); WIREFRAME*/
-
   display: flex;
   flex-direction: column;
-
   width: 100%;
   height: 3.75rem;
-
   padding-top: 0.625rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
-
   box-sizing: border-box;
 }
 </style>

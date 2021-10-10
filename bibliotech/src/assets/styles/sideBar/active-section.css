@@ -1,0 +1,13 @@
+.contenedor-barra--actual {
+  background-color: #ffe6e0 !important;
+  border-radius: 4px;
+}
+
+.sideBar_elemento__titulo--actual {
+  color: #ff3000;
+  font-weight: 400;
+}
+
+.material-icons--settings-actual {
+  color: #ff3000;
+}
