@@ -57,7 +57,6 @@ import labelRoot from "./labelRoot.vue"
 import labelAdmin from "./labelAdmin.vue"
 import navItem from "./sideBar/navItem.vue"
 
-
 export default {
   components: {
     labelRoot,
@@ -66,7 +65,7 @@ export default {
   },
   data() {
     return {
-      status: 0
+      status: 1
     }
   },
   methods: {
