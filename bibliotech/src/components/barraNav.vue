@@ -30,13 +30,13 @@
     <!-- Grupo de elementos #2 -->
     <div class=" contenedor-body-1">
       <a @click="changeOption(1)" >
-        <navItem :status="option == 1 ? true : false" title="Recientes" icon="restore"/>  
+        <navItem :status="option == 1 ? true : false" title="Recientes" icon="restore" view="Newer"/>
       </a>
       <a @click="changeOption(2)">
-        <navItem :status="option == 2 ? true : false" title="Artículos" icon="import_contacts"/>
+        <navItem :status="option == 2 ? true : false" title="Artículos" icon="import_contacts" view="Item"/>
       </a>
       <a @click="changeOption(3)">
-        <navItem :status="option == 3 ? true : false" title="Administradores" icon="group"/>
+        <navItem :status="option == 3 ? true : false" title="Administradores" icon="group" view="Admin"/>
       </a>     
     </div>
     <!-- FIN Grupo de elementos #2 -->
@@ -54,20 +54,15 @@
 import labelRoot from "../components/labelRoot.vue"
 import labelAdmin from "../components/labelAdmin.vue"
 import navItem from "../components/sideBar/navItem.vue"
-import itemBar from "../components/sideBar/itemBar.vue"
-import adminBar from "../components/sideBar/adminBar.vue"
 import logoutBar from "../components/sideBar/logoutBar.vue"
-import NewerBar from "@/components/sidebar/NewerBar.vue"
+
 
 export default {
   components: {
     labelRoot,
     labelAdmin,
-    NewerBar,
-    itemBar,
-    adminBar,
-    logoutBar,
-    navItem
+    navItem,
+    logoutBar
   },
   data() {
     return {
