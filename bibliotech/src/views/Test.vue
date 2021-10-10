@@ -1,17 +1,17 @@
 <template>
   <div>
     <aside class="d-flex flex-column barra-lateral">
-      <barraNav />
+      <SideBar />
     </aside>
   </div>
 </template>
 <script>
-import barraNav from "../components/barraNav.vue";
+import SideBar from  "../components/SideBar.vue"
 
 export default {
   components: {
-    barraNav,
-  },
+    SideBar
+  }
 };
 </script>
 <style scoped>

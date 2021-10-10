@@ -29,21 +29,23 @@
 
     <!-- Grupo de elementos #2 -->
     <div class=" contenedor-body-1">
-      <a @click="changeOption(1)" >
-        <navItem :status="option == 1 ? true : false" title="Recientes" icon="restore" view="Newer"/>
+      <a @click="changeStatus(1)" >
+        <navItem :status="status == 1 ? true : false" title="Recientes" icon="restore" view="Newer"/>
       </a>
-      <a @click="changeOption(2)">
-        <navItem :status="option == 2 ? true : false" title="Artículos" icon="import_contacts" view="Item"/>
+      <a @click="changeStatus(2)">
+        <navItem :status="status == 2 ? true : false" title="Artículos" icon="import_contacts" view="Item"/>
       </a>
-      <a @click="changeOption(3)">
-        <navItem :status="option == 3 ? true : false" title="Administradores" icon="group" view="Admin"/>
+      <a @click="changeStatus(3)">
+        <navItem :status="status == 3 ? true : false" title="Administradores" icon="group" view="Admin"/>
       </a>     
     </div>
     <!-- FIN Grupo de elementos #2 -->
 
     <!-- Grupo de elementos #3 -->
     <div class="contenedor-body-2">
-      <logoutBar />
+      <a @click="changeStatus(4)">
+        <navItem :status="status == 4 ? true : false" title="Salir" icon="logout" view="Login"/>
+      </a> 
     </div>
     <!-- FIN Grupo de elementos #3 -->
   </div>
@@ -54,7 +56,6 @@
 import labelRoot from "../components/labelRoot.vue"
 import labelAdmin from "../components/labelAdmin.vue"
 import navItem from "../components/sideBar/navItem.vue"
-import logoutBar from "../components/sideBar/logoutBar.vue"
 
 
 export default {
@@ -62,16 +63,15 @@ export default {
     labelRoot,
     labelAdmin,
     navItem,
-    logoutBar
   },
   data() {
     return {
-      option: 1
+      status: 1
     }
   },
   methods: {
-    changeOption(i) {
-      this.option = i
+    changeStatus(i) {
+      this.status = i
       console.log(i)
     }
   }
