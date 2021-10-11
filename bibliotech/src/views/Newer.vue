@@ -62,10 +62,10 @@ export default {
     data() {
     return {
       items: [
-        { book_title: 'Dickerson', book_author: 'Macdonald', image:'placeholder.png'},
-        { book_title: 'Jami', book_author: 'Carney', image:'placeholder.png'},
-        { book_title: 'Dickerson', book_author: 'Macdonald', image:'placeholder.png'},
-        { book_title: 'Jami', book_author: 'Carney', image:'placeholder.png'}
+        { book_title: 'Science & Technology', book_author: 'Ravi Agrahari', image:'placeholder.png'},
+        { book_title: 'Introducing Go', book_author: 'Caleb Doxsey', image:'placeholder.png'},
+        { book_title: 'Programa o serás programado', book_author: 'Douglas Rushkoff', image:'placeholder.png'},
+        { book_title: 'New Yorker Issue Vol 85-26', book_author: 'The New Yorker', image:'placeholder.png'}
       ],
       admins: [
         { admin_name: 'Garry', username: 'garrygarrison', image:'placeholder.png'},
