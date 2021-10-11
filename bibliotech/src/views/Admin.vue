@@ -1,7 +1,7 @@
 <template>
   <div>
     <aside class="d-flex flex-column barra-lateral">
-      <SideBar />
+      <SideBar :option="3"/>
     </aside>
   </div>
 </template>

@@ -1,15 +1,17 @@
 <template>
   <div class="carta">
+      <!-- Seccion superior de la carta -->
       <div class="carta-header">
           <div class="carta-header__texto">
-              <p class="carta-header__texto carta-header__texto--titulo">Nombre del Articulo</p>
-              <p class="carta-header__texto carta-header__texto--subtitulo">Nombre del Autor</p>
+              <p class="carta-header__texto carta-header__texto--titulo">{{ admin.admin_name }}</p>
+              <p class="carta-header__texto carta-header__texto--subtitulo">{{ admin.username }}</p>
           </div>
       </div>
       <!-- Seccion central de la carta -->
       <div class="carta-body">
           <div class="carta-body__imagen">
-              <img src="../assets/images/placeholder.png" alt="">
+              <!-- <img src="../assets/images/placeholder.png"> -->
+              <img :src="`cardImage/${admin.image}`" alt="">
           </div>
       </div>
       <!-- Seccion inferior de la carta -->
@@ -23,6 +25,16 @@
       </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    admin: {
+      type: Object,
+      default: () => {}
+    },
+  }
+}
+</script>
 <style scoped>
 .carta {
   background-color: #ffffff;

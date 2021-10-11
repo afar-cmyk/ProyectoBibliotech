@@ -29,23 +29,15 @@
 
     <!-- Grupo de elementos #2 -->
     <div class=" contenedor-body-1">
-      <a @click="changeStatus(1)" >
-        <navItem :status="status == 1 ? true : false" title="Recientes" icon="restore" view="Newer"/>
-      </a>
-      <a @click="changeStatus(2)">
-        <navItem :status="status == 2 ? true : false" title="Artículos" icon="import_contacts" view="Item"/>
-      </a>
-      <a @click="changeStatus(3)">
-        <navItem :status="status == 3 ? true : false" title="Administradores" icon="group" view="Admin"/>
-      </a>     
+      <navItem :status="option == 1 ? true : false" title="Recientes" icon="restore" view="Newer"/>
+      <navItem :status="option == 2 ? true : false" title="Artículos" icon="import_contacts" view="Item"/>
+      <navItem :status="option == 3 ? true : false" title="Administradores" icon="group" view="Admin"/>          
     </div>
     <!-- FIN Grupo de elementos #2 -->
 
     <!-- Grupo de elementos #3 -->
     <div class="contenedor-body-2">
-      <a @click="changeStatus(4)">
-        <navItem :status="status == 4 ? true : false" title="Salir" icon="logout" view="Login"/>
-      </a> 
+        <navItem title="Salir" icon="logout" view="Login"/>
     </div>
     <!-- FIN Grupo de elementos #3 -->
   </div>
@@ -63,11 +55,12 @@ export default {
     labelAdmin,
     navItem,
   },
-  data() {
-    return {
-      status: 1
+  props: {
+    option: {
+      type: Number,
+      default: () => 1
     }
-  },
+  }, 
   methods: {
     changeStatus(i) {
       this.status = i
@@ -78,13 +71,11 @@ export default {
 </script>
 
 <style scoped>
-/* Espacio para el logo y el nombre */
 .contenedor-header {
   width: 100%;
   height: 9vw;
   border-bottom: 1px solid #0000001f;
 }
-
 .contenedor-header__logo {
   width: 100%;
   height: 100%;
@@ -93,11 +84,9 @@ export default {
   padding-top: 1.25rem;
   box-sizing: border-box;
 }
-
 .contenedor-header__logo img {
   width: 100%;
 }
-
 .contenedor-header__usuario {
   width: 100%;
   height: 2.5rem;
@@ -105,19 +94,16 @@ export default {
   padding-right: 0.625rem;
   box-sizing: border-box;
 }
-
 .header__usuario {
   padding: 0;
   width: 100%;
   height: 1.25rem;
 }
-
 .usuario_titulo {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin-bottom: 0;
 }
-/* Primera cuerpo del menú */
 .contenedor-body-1 {
   display: flex;
   flex-direction: column;
@@ -129,7 +115,6 @@ export default {
   border-bottom: 1px solid #0000001f;
   box-sizing: border-box;
 }
-/* Segunda sección del menú */
 .contenedor-body-2 {
   display: flex;
   flex-direction: column;

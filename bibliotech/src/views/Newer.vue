@@ -2,7 +2,7 @@
   <div class="d-flex">
     <!-- Barra de navegación -->
     <aside class="d-flex flex-column barra-lateral">
-      <SideBar />
+      <SideBar :option="1"/>
     </aside> <!-- FIN Barra de navegación -->
     <main class="contenido">
       <div class="seccion-central">
@@ -18,10 +18,7 @@
 
             <!-- Envoltura para las cajas -->
             <div class="caja__cartas">
-              <Tarjeta />
-              <Tarjeta />
-              <Tarjeta />
-              <Tarjeta />
+              <Tarjeta v-for="item, index in items" :key="index" :item="item"/>
             </div> <!-- FIN Envoltura para las cajas -->
 
           </div>
@@ -41,10 +38,7 @@
 
             <!-- Envoltura para las cajas -->
             <div class="caja__cartas">
-              <Tarjeta />
-              <Tarjeta />
-              <Tarjeta />
-              <Tarjeta />
+              <TarjetaAdmin v-for="admin, index in admins" :key="index" :admin="admin"/>
             </div> <!-- FIN Envoltura para las cajas -->
 
           </div>
@@ -54,15 +48,33 @@
     </main>
   </div>
 </template>
-<script>
+<script >
 import SideBar from "../components/SideBar.vue"
-import Tarjeta from "../components/TarjetaArticulos.vue"
+import Tarjeta from "../components/Card.vue"
+import TarjetaAdmin from "../components/CardAdmin.vue"
 
 export default {
   components: {
     SideBar,
-    Tarjeta
+    Tarjeta,
+    TarjetaAdmin
   },
+    data() {
+    return {
+      items: [
+        { book_title: 'Dickerson', book_author: 'Macdonald', image:'placeholder.png'},
+        { book_title: 'Jami', book_author: 'Carney', image:'placeholder.png'},
+        { book_title: 'Dickerson', book_author: 'Macdonald', image:'placeholder.png'},
+        { book_title: 'Jami', book_author: 'Carney', image:'placeholder.png'}
+      ],
+      admins: [
+        { admin_name: 'Garry', username: 'garrygarrison', image:'placeholder.png'},
+        { admin_name: 'Maria', username: 'merrymaria', image:'placeholder.png'},
+        { admin_name: 'Pablo', username: 'pablopablo', image:'placeholder.png'},
+        { admin_name: 'Dick', username: 'dickdickenson', image:'placeholder.png'},
+      ]
+    }
+  }
 };
 </script>
 <style scoped>

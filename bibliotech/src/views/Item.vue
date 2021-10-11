@@ -4,7 +4,7 @@
 
     <!-- Barra de navegación -->
     <aside class="d-flex flex-column barra-lateral">
-      <SideBar />
+      <SideBar :option="2"/>
     </aside> <!-- FIN Barra de navegación -->
 
 
@@ -18,7 +18,7 @@
 
             <!-- Migas de pan -->
             <div class="contenedor-migasdepan">
-                <MigaMain />
+              <MigaMain />
             </div> <!-- FIN Migas de pan -->
             
             <!-- Botones con funciones -->
@@ -33,20 +33,13 @@
 
         </div>
 
-      </div><!-- Parte superior (Migas de pan y botones) -->
+      </div> <!-- FIN Parte superior (Migas de pan y botones) -->
 
       <!-- Contenido luego de las migas de pan (Cartas) -->
       <div class="seccion-central">
         <!-- Grilla dinamica -->
         <div class="grilla-responsive">
-          <Tarjeta />
-          <Tarjeta />
-          <Tarjeta />
-          <Tarjeta />
-          <Tarjeta />
-          <Tarjeta />
-          <Tarjeta />
-          <Tarjeta />
+          <Tarjeta v-for="item, index in items" :key="index" :item="item"/>
         </div> <!-- FIN Grilla dinamica -->
 
       </div> <!-- FIN Contenido luego de las migas de pan (Cartas) -->
@@ -57,7 +50,7 @@
 </template>
 <script>
 import SideBar from "../components/SideBar.vue"
-import Tarjeta from "../components/TarjetaArticulos.vue"
+import Tarjeta from "../components/Card.vue"
 import Miga from "../components/BreadCrumbsLinks.vue"
 import MigaMain from "../components/BreadCrumbsMain.vue"
 
@@ -67,6 +60,16 @@ export default {
     Tarjeta,
     Miga,
     MigaMain
+  },
+  data() {
+    return {
+      items: [
+        { book_title: 'Dickerson', book_author: 'Macdonald', image:'placeholder.png'},
+        { book_title: 'Jami', book_author: 'Carney', image:'placeholder.png'},
+        { book_title: 'Dickerson', book_author: 'Macdonald', image:'placeholder.png'},
+        { book_title: 'Jami', book_author: 'Carney', image:'placeholder.png'}
+      ],
+    }
   },
 };
 </script>
