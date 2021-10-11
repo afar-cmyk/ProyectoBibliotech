@@ -18,8 +18,7 @@
 
             <!-- Migas de pan -->
             <div class="contenedor-migasdepan">
-                <p class="mb-0 miga2 migas__principal--texto">Artículos</p>
-                <p class="mb-0 separador migas__principal--texto">|</p>
+                <MigaMain />
             </div> <!-- FIN Migas de pan -->
             
             <!-- Botones con funciones -->
@@ -59,11 +58,15 @@
 <script>
 import SideBar from "../components/SideBar.vue"
 import Tarjeta from "../components/TarjetaArticulos.vue"
+import Miga from "../components/BreadCrumbsLinks.vue"
+import MigaMain from "../components/BreadCrumbsMain.vue"
 
 export default {
   components: {
     SideBar,
-    Tarjeta
+    Tarjeta,
+    Miga,
+    MigaMain
   },
 };
 </script>

@@ -83,6 +83,7 @@
 .carta-body img {
   max-width: 100%;
   height: auto;
+  width: 316px;
 }
 .carta-footer {
   height: 40px;
