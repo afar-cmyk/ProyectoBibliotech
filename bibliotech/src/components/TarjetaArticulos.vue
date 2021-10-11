@@ -9,7 +9,7 @@
       <!-- Seccion central de la carta -->
       <div class="carta-body">
           <div class="carta-body__imagen">
-              <img src="assets/images/illustrated/book-one.png" alt="">
+              <img src="../assets/images/placeholder.png" alt="">
           </div>
       </div>
       <!-- Seccion inferior de la carta -->
@@ -77,16 +77,14 @@
   justify-content: center;
   overflow: hidden;
   max-height: 174px;
+  max-width: 316px;
   box-sizing: border-box;
 }
 .carta-body img {
-  /* background-color: #03DAC5; WIREFRAME*/
   max-width: 100%;
   height: auto;
 }
 .carta-footer {
-  /* background-color: cyan; WIREFRAME*/
-
   height: 40px;
   width: 100%;
   display: flex;
