@@ -8,7 +8,7 @@
                 </div>
               </div> <!-- FIN Boton para crear elementos -->
 
-    <b-modal id="modal-creation" title="Nuevo Artículo" hide-footer centered>
+    <b-modal id="modal-creation" title="Nuevo Administrador" hide-footer centered>
 
         <b-form @submit="onSubmit">   
         <b-container>  
@@ -50,7 +50,7 @@
 
             <b-row>
             <b-col>
-                <div class="form-floating mb-4">
+                <div class="form-floating">
                     <input v-model="form.lastname" type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
                     <label label for="mb-0 floatingInput" class="mb-0 text-secondary">Apellido</label>
                 </div>
