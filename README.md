@@ -1,4 +1,4 @@
-![Logo](/BibliotechWeb/assets/images/logo-minimal.png) 
+![Logo](/bibliotech/src/assets/images/logo-minimal.png) 
 
 ## Desarrollo de software - Ciclo 3 MISIONTIC
 
