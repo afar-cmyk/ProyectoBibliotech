@@ -32,7 +32,7 @@
       <div class="seccion-central">
         <!-- Grilla dinamica -->
         <div class="grilla-responsive">
-          <Tarjeta v-for="item, index in items" :key="index" :index="index" :item="item"/>
+          <Tarjeta v-for="admin, index in admins" :key="index" :index="index" :admin="admin"/>
         </div> <!-- FIN Grilla dinamica -->
       </div> <!-- FIN Contenido luego de las migas de pan (Cartas) -->
 
@@ -54,11 +54,11 @@ export default {
   },
   data() {
     return {
-      items: [
-        { book_title: 'Science & Technology', book_author: 'Ravi Agrahari', image:'placeholder.png'},
-        { book_title: 'Introducing Go', book_author: 'Caleb Doxsey', image:'placeholder.png'},
-        { book_title: 'Programa o serás programado', book_author: 'Douglas Rushkoff', image:'placeholder.png'},
-        { book_title: 'New Yorker Issue Vol 85-26', book_author: 'The New Yorker', image:'placeholder.png'}
+      admins: [
+        { admin_name: 'Garry', admin_username: 'garrygarrison', image:'placeholder.png'},
+        { admin_name: 'Maria', admin_username: 'marymaria', image:'placeholder.png'},
+        { admin_name: 'Pablo', admin_username: 'pablopablo', image:'placeholder.png'},
+        { admin_name: 'Dick', admin_username: 'dickdickenson', image:'placeholder.png'},
       ]
     }
   },

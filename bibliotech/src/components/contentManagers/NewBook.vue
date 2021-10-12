@@ -68,7 +68,7 @@
         </b-container>
 
         <div class="mt-4 text-center">
-            <b-button class="boton-modal-b mb-0" variant="danger" @click="$bvModal.hide(`modal-${index}`)">Volver</b-button>
+            <b-button class="boton-modal-b mb-0" variant="danger" @click="$bvModal.hide(`modal-creation`)">Volver</b-button>
             <b-button type="submit" variant="success" class="boton-modal-a mb-0">Crear</b-button>
         </div>
         </b-form>
@@ -157,9 +157,11 @@ export default {
   background-color: #485EB2;
   border: none;
   margin-left: 12px;
+  padding-top: 5px !important;
 }
 .boton-modal-b{
   background-color: #ad0202;
   border: none;
+  padding-top: 5px !important;
 }
 </style>
