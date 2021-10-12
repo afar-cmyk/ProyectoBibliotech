@@ -1,385 +1,143 @@
 <template>
-  <div class="cuerpo">
-    <SideBar />
-    <!-- Contenido principal de la pagina -->
+  <div class="d-flex">
+    <!-- Barra de navegación -->
+    <aside class="d-flex flex-column barra-lateral">
+      <SideBar :option="1"/>
+    </aside> <!-- FIN Barra de navegación -->
     <main class="contenido">
       <div class="seccion-central">
         <div class="segmentos-centrales">
-          <div class="segmentos-centrales__contenedor-a">
-            <div class="contenedor-a__titulo">
-              <p class="contenedor-a__titulo contenedor-a__titulo--estilos">
-                Articulos Recientes
-              </p>
-            </div>
 
-            <div class="contenedor-a__cartas">
-              <!-- Carta para listar elementos -->
-              <div class="carta">
-                <!-- Seccion superior de la carta -->
-                <div class="carta-header">
-                  <div class="carta-header__texto">
-                    <p class="carta-header__texto carta-header__texto--titulo">
-                      Nombre del Articulo
-                    </p>
-                    <p
-                      class="carta-header__texto carta-header__texto--subtitulo"
-                    >
-                      Nombre del Autor
-                    </p>
-                  </div>
-                </div>
+          <!-- Contenedor rectangular que contiene a el titulo y a las tarjetas -->
+          <div class="segmentos-centrales__contenedor">
 
-                <!-- Seccion central de la carta -->
-                <div class="carta-body">
-                  <div class="carta-body__imagen">
-                    <img
-                      src="../assets/images/illustrated/book-one.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
+            <!-- Titulo -->
+            <div class="caja__titulo">
+              <p class="mb-0 caja__titulo--estilos">Articulos Recientes</p>
+            </div> <!-- FIN Titulo -->
 
-                <!-- Seccion inferior de la carta -->
-                <div class="carta-footer">
-                  <div class="carta-footer__botones">
-                    <a
-                      class="carta-footer__botones carta-footer__botones--cancelar"
-                      href="item.html"
-                      >BORRAR</a
-                    >
-                    <input
-                      class="carta-footer__botones carta-footer__botones--boton"
-                      type="submit"
-                      value="EDITAR"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- FIN Carta para listar elementos -->
+            <!-- Envoltura para las cajas -->
+            <div class="caja__cartas">
+              <Tarjeta v-for="item, index in items" :key="index" :index="index" :item="item"/>
+            </div> <!-- FIN Envoltura para las cajas -->
 
-              <!-- Carta para listar elementos -->
-              <div class="carta">
-                <!-- Seccion superior de la carta -->
-                <div class="carta-header">
-                  <div class="carta-header__texto">
-                    <p class="carta-header__texto carta-header__texto--titulo">
-                      Nombre del Articulo
-                    </p>
-                    <p
-                      class="carta-header__texto carta-header__texto--subtitulo"
-                    >
-                      Nombre del Autor
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Seccion central de la carta -->
-                <div class="carta-body">
-                  <div class="carta-body__imagen">
-                    <img
-                      src="../assets/images/illustrated/book-one.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <!-- Seccion inferior de la carta -->
-                <div class="carta-footer">
-                  <div class="carta-footer__botones">
-                    <a
-                      class="carta-footer__botones carta-footer__botones--cancelar"
-                      href="item.html"
-                      >BORRAR</a
-                    >
-                    <input
-                      class="carta-footer__botones carta-footer__botones--boton"
-                      type="submit"
-                      value="EDITAR"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- FIN Carta para listar elementos -->
-
-              <!-- Carta para listar elementos -->
-              <div class="carta">
-                <!-- Seccion superior de la carta -->
-                <div class="carta-header">
-                  <div class="carta-header__texto">
-                    <p class="carta-header__texto carta-header__texto--titulo">
-                      Nombre del Articulo
-                    </p>
-                    <p
-                      class="carta-header__texto carta-header__texto--subtitulo"
-                    >
-                      Nombre del Autor
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Seccion central de la carta -->
-                <div class="carta-body">
-                  <div class="carta-body__imagen">
-                    <img
-                      src="../assets/images/illustrated/book-one.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <!-- Seccion inferior de la carta -->
-                <div class="carta-footer">
-                  <div class="carta-footer__botones">
-                    <a
-                      class="carta-footer__botones carta-footer__botones--cancelar"
-                      href="item.html"
-                      >BORRAR</a
-                    >
-                    <input
-                      class="carta-footer__botones carta-footer__botones--boton"
-                      type="submit"
-                      value="EDITAR"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- FIN Carta para listar elementos -->
-
-              <!-- Carta para listar elementos -->
-              <div class="carta">
-                <!-- Seccion superior de la carta -->
-                <div class="carta-header">
-                  <div class="carta-header__texto">
-                    <p class="carta-header__texto carta-header__texto--titulo">
-                      Nombre del Articulo
-                    </p>
-                    <p
-                      class="carta-header__texto carta-header__texto--subtitulo"
-                    >
-                      Nombre del Autor
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Seccion central de la carta -->
-                <div class="carta-body">
-                  <div class="carta-body__imagen">
-                    <img
-                      src="../assets/images/illustrated/book-one.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <!-- Seccion inferior de la carta -->
-                <div class="carta-footer">
-                  <div class="carta-footer__botones">
-                    <a
-                      class="carta-footer__botones carta-footer__botones--cancelar"
-                      href="item.html"
-                      >BORRAR</a
-                    >
-                    <input
-                      class="carta-footer__botones carta-footer__botones--boton"
-                      type="submit"
-                      value="EDITAR"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- FIN Carta para listar elementos -->
-            </div>
           </div>
 
-          <div class="segmentos-centrales__separador">
-            <div class="separador__caja"></div>
+              <!-- Separador central -->
+              <div class="segmentos-centrales__separador">
+                <div class="separador__caja"></div>
+              </div> <!-- FIN Separador central -->
+
+              <!-- Contenedor rectangular que contiene a el titulo y a las tarjetas -->
+          <div class="segmentos-centrales__contenedor">
+
+            <!-- Titulo -->
+            <div class="caja__titulo">
+              <p class="mb-0 caja__titulo--estilos">Administradores Recientes</p>
+            </div> <!-- FIN Titulo -->
+
+            <!-- Envoltura para las cajas -->
+            <div class="caja__cartas">
+              <TarjetaAdmin v-for="admin, index in admins" :key="index" :index="index" :admin="admin"/>
+            </div> <!-- FIN Envoltura para las cajas -->
+
           </div>
 
-          <div class="segmentos-centrales__contenedor-a">
-            <div class="contenedor-a__titulo">
-              <p class="contenedor-a__titulo contenedor-a__titulo--estilos">
-                Administradores Recientes
-              </p>
-            </div>
-
-            <div class="contenedor-a__cartas">
-              <!-- Carta para listar elementos -->
-              <div class="carta">
-                <!-- Seccion superior de la carta -->
-                <div class="carta-header">
-                  <div class="carta-header__texto">
-                    <p class="carta-header__texto carta-header__texto--titulo">
-                      Nombre del Administrador
-                    </p>
-                    <p
-                      class="carta-header__texto carta-header__texto--subtitulo"
-                    >
-                      Nombre de Usuario
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Seccion central de la carta -->
-                <div class="carta-body">
-                  <div class="carta-body__imagen">
-                    <img src="../assets/images/ex-photo-woman.jpg" alt="" />
-                  </div>
-                </div>
-
-                <!-- Seccion inferior de la carta -->
-                <div class="carta-footer">
-                  <div class="carta-footer__botones">
-                    <a
-                      class="carta-footer__botones carta-footer__botones--cancelar"
-                      href="item.html"
-                      >BORRAR</a
-                    >
-                    <input
-                      class="carta-footer__botones carta-footer__botones--boton"
-                      type="submit"
-                      value="EDITAR"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- FIN Carta para listar elementos -->
-
-              <!-- Carta para listar elementos -->
-              <div class="carta">
-                <!-- Seccion superior de la carta -->
-                <div class="carta-header">
-                  <div class="carta-header__texto">
-                    <p class="carta-header__texto carta-header__texto--titulo">
-                      Nombre del Administrador
-                    </p>
-                    <p
-                      class="carta-header__texto carta-header__texto--subtitulo"
-                    >
-                      Nombre de Usuario
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Seccion central de la carta -->
-                <div class="carta-body">
-                  <div class="carta-body__imagen">
-                    <img src="../assets/images/ex-photo-woman.jpg" alt="" />
-                  </div>
-                </div>
-
-                <!-- Seccion inferior de la carta -->
-                <div class="carta-footer">
-                  <div class="carta-footer__botones">
-                    <a
-                      class="carta-footer__botones carta-footer__botones--cancelar"
-                      href="item.html"
-                      >BORRAR</a
-                    >
-                    <input
-                      class="carta-footer__botones carta-footer__botones--boton"
-                      type="submit"
-                      value="EDITAR"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- FIN Carta para listar elementos -->
-
-              <!-- Carta para listar elementos -->
-              <div class="carta">
-                <!-- Seccion superior de la carta -->
-                <div class="carta-header">
-                  <div class="carta-header__texto">
-                    <p class="carta-header__texto carta-header__texto--titulo">
-                      Nombre del Administrador
-                    </p>
-                    <p
-                      class="carta-header__texto carta-header__texto--subtitulo"
-                    >
-                      Nombre de Usuario
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Seccion central de la carta -->
-                <div class="carta-body">
-                  <div class="carta-body__imagen">
-                    <img src="../assets/images/ex-photo-woman.jpg" alt="" />
-                  </div>
-                </div>
-
-                <!-- Seccion inferior de la carta -->
-                <div class="carta-footer">
-                  <div class="carta-footer__botones">
-                    <a
-                      class="carta-footer__botones carta-footer__botones--cancelar"
-                      href="item.html"
-                      >BORRAR</a
-                    >
-                    <input
-                      class="carta-footer__botones carta-footer__botones--boton"
-                      type="submit"
-                      value="EDITAR"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- FIN Carta para listar elementos -->
-
-              <!-- Carta para listar elementos -->
-              <div class="carta">
-                <!-- Seccion superior de la carta -->
-                <div class="carta-header">
-                  <div class="carta-header__texto">
-                    <p class="carta-header__texto carta-header__texto--titulo">
-                      Nombre del Administrador
-                    </p>
-                    <p
-                      class="carta-header__texto carta-header__texto--subtitulo"
-                    >
-                      Nombre de Usuario
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Seccion central de la carta -->
-                <div class="carta-body">
-                  <div class="carta-body__imagen">
-                    <img src="../assets/images/ex-photo-woman.jpg" alt="" />
-                  </div>
-                </div>
-
-                <!-- Seccion inferior de la carta -->
-                <div class="carta-footer">
-                  <div class="carta-footer__botones">
-                    <a
-                      class="carta-footer__botones carta-footer__botones--cancelar"
-                      href="item.html"
-                      >BORRAR</a
-                    >
-                    <input
-                      class="carta-footer__botones carta-footer__botones--boton"
-                      type="submit"
-                      value="EDITAR"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- FIN Carta para listar elementos -->
-            </div>
-          </div>
         </div>
       </div>
     </main>
-    <!-- FIN Contenido principal de la pagina -->
   </div>
 </template>
-<script>
-import SideBar from '../components/sidebar.vue'
+<script >
+import SideBar from "../components/SideBar.vue"
+import Tarjeta from "../components/contentManagers/CardEditItem.vue"
+import TarjetaAdmin from "../components/contentManagers/CardEditAdmin.vue"
 
 export default {
   components: {
-    SideBar
+    SideBar,
+    Tarjeta,
+    TarjetaAdmin
+  },
+    data() {
+    return {
+      items: [
+        { book_title: 'Science & Technology', book_author: 'Ravi Agrahari', image:'placeholder.png'},
+        { book_title: 'Introducing Go', book_author: 'Caleb Doxsey', image:'placeholder.png'},
+        { book_title: 'Programa o serás programado', book_author: 'Douglas Rushkoff', image:'placeholder.png'},
+        { book_title: 'New Yorker Issue Vol 85-26', book_author: 'The New Yorker', image:'placeholder.png'}
+      ],
+      admins: [
+        { admin_name: 'Garry', username: 'garrygarrison', image:'placeholder.png'},
+        { admin_name: 'Maria', username: 'merrymaria', image:'placeholder.png'},
+        { admin_name: 'Pablo', username: 'pablopablo', image:'placeholder.png'},
+        { admin_name: 'Dick', username: 'dickdickenson', image:'placeholder.png'},
+      ]
+    }
   }
-}
+};
 </script>
+<style scoped>
+.barra-lateral {
+  background-color: white;
+  width: 16vw;
+  height: 100vh;
+  border-right: 1px solid #0000001f;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.082), 0 1px 2px rgba(0, 0, 0, 0.158);
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    width: 84vw;
+    height: 100vh;
+}
+.seccion-central {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+.segmentos-centrales {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.segmentos-centrales__contenedor {
+    padding-left: 1px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2px;
+}
+.caja__titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+}
+.caja__titulo--estilos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.016rem;
+}
+.caja__cartas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.segmentos-centrales__separador {
+    background-color: #0000001F;
+    margin-top: 39px;
+    margin-bottom: 20px;
+}
+.separador__caja {
+    height: 1px;
+    width: 100%;
+}
+</style>
