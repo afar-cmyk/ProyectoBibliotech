@@ -34,13 +34,12 @@
 </template>
 <script>
 import SideBar from  "../components/SideBar.vue"
-import MigasLinks from "../components/BreadCrumbsLinks.vue"
+
 
 
 export default {
   components: {
-    SideBar,
-    MigasLinks,
+    SideBar
 
   }
 };
