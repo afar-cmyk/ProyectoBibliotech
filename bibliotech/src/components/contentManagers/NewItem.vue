@@ -1,58 +1,55 @@
 <template>
     <!-- Recuadro que contiene a todos los elementos del formulario -->
-            <div class="formulario-base">
+            <b-container class="formulario-base d-flex flex-wrap">
+                <b-row>
+                    <b-col class="formulario-base-lado">
+                        <div class="form-floating mt-0 mb-5">
+                            <input type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                            <label label for="mb-0 floatingInput" class="text-secondary">ISBN</label>
+                        </div>
 
-                <!-- Segmento izquiero del contenedor -->
-                <div class="formulario-base-lado1">
-                    <label for="isbn">ISBN:</label>
-                    <input type="text" id="isbn" name="isbn">
+                        <div class="form-floating mb-5">
+                            <input type="email" class="mb-0 form-control" id="floatingInput" placeholder="">
+                            <label label for="mb-0 floatingInput" class="text-secondary">Nombre del artículo</label>
+                        </div>
 
-                    <label for="nombre-articulo">Nombre del artículo:</label>
-                    <input type="text" id="nombre-articulo" name="nombre-articulo">
+                        <div class="form-floating">
+                            <input type="email" class="mb-0 form-control" id="floatingInput" placeholder="">
+                            <label label for="mb-0 floatingInput" class="text-secondary">Nombre del autor</label>
+                        </div>
+                    </b-col>
 
-                    <label for="nombre-autor">Nombre del autor:</label>
-                    <input type="text" id="nombre-autor" name="nombre-autor">
-                </div>
-                <!-- FIN Segmento izquero del contenedor -->
+                    <b-col class="formulario-base-lado">
+                        <div class="form-floating mt-0 mb-5">
+                            <input type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                            <label label for="mb-0 floatingInput" class="mb-0 text-secondary">Nombre de la editorial</label>
+                        </div>
 
+                        <div class="form-floating">
+                            <select class="mb-0 selector form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <option selected>Seleccione una categoria</option>
+                                <option value="1">Académico</option>
+                                <option value="2">Digital</option>
+                                <option value="3">Ilustración</option>
+                                <option value="4">Manual</option>
+                                <option value="5">Revista</option>
+                            </select>
+                            <label for="floatingSelectGrid">Categoria</label>
+                        </div>
+                    </b-col>
+                </b-row>
 
-                <!-- Segmento derecho del contenedor -->
-                <div class="formulario-base-lado2">
-                    <label for="nombre-editorial">Nombre de la editorial:</label>
-                    <input type="text" id="nombre-editorial" name="nombre-editorial">
+                <b-row class="contenedor-formulario-footer">
 
-                    <label for="nombre-editorial">Seleccione una categoria:</label>
-                    <select name="categoria" id="categoria">
-                        <option value=""></option>
-                        <option value="Académico">Académico</option>
-                        <option value="Digital">Digital</option>
-                        <option value="Ilustración">Ilustración</option>
-                        <option value="Manual">Manual</option>
-                        <option value="Revista">Revista</option>
-                    </select>
-                </div>
-                <!-- FIN Segmento derecho del contenedor -->
-
-                <!-- Sección inferior del contenedor -->
-                <div class="contenedor-formulario-footer">
-
-                    <div class="contenedor-botones">
-                        <a class="enlace-cancelar" href="item.html">CANCELAR</a>
-                        <input class="formulario__boton-crear" type="submit" value="CREAR">
-                    </div>
-
-                </div>
-                <!-- FIN Sección inferior del contenedor -->
-
-            </div>
+                </b-row>
+            </b-container >
             <!-- FIN Recuadro que contiene a todos los elementos del formulario -->
 </template>
 
 <style scoped>
 .formulario-base {
+    display: flex !important;
     background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-flow: wrap;
     width: 53rem;
     height: 25rem;
     border-radius: 4px;
@@ -61,49 +58,15 @@
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
 }
-.formulario-base-lado1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.formulario-base-lado{
     width: 26.5rem;
     height: 21.438rem;
     padding-top: 2.5rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    box-sizing: border-box;
-}
-.formulario-base-lado2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: normal;
-    width: 26.5rem;
-    height: 21.438rem;
-    padding-top: 2.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    box-sizing: border-box;
-}
-.formulario-base-lado1 input {
-    width: 21.313rem;
-    height: 2.5rem;
-    margin-bottom: 60px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-.formulario-base-lado2 input {
-    width: 21.313rem;
-    margin-bottom: 60px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-.formulario-base-lado2 select {
-    width: 21.313rem;
-    margin-bottom: 60px;
     box-sizing: border-box;
 }
 .contenedor-formulario-footer {
-    display: flex;
-    justify-content: end;
     width: 100%;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;

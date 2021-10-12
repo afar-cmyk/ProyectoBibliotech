@@ -20,7 +20,7 @@
               <a class="carta-footer__botones carta-footer__botones--cancelar"
                 href="">Borrar</a>
               <input class="carta-footer__botones carta-footer__botones--boton" type="submit"
-                value="EDITAR" >
+                value="Editar" >
           </div>
       </div>
   </div>
@@ -71,7 +71,7 @@ export default {
 }
 .carta-header__texto--subtitulo {
   font-family: "Roboto";
-  font-size: 0.75rem;
+  font-size: 0.80rem;
   font-weight: 300;
   padding: 0%;
   margin: 0%;
@@ -112,22 +112,29 @@ export default {
 }
 .carta-footer__botones--cancelar {
   font-family: 'Roboto', sans-serif;
-  color: #FF6C38;
-  font-size: 0.80rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #FFFFFF;
   text-decoration: none;
+  background-color: #ad0202;
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 6px;
 }
 .carta-footer__botones--cancelar:hover {
-  color: #da5e31;
+  background-color: #8f0303;
 }
 .carta-footer__botones--boton {
   font-family: 'Roboto', sans-serif;
   border-radius: 4px;
-  font-size: 0.625rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 400;
   color: #FFFFFF;
   background-color: #485EB2;
-  margin-left: 7px;
-  padding: 6px;
+  padding: 5px;
   border: none;
   outline: none;
   cursor: pointer;

@@ -15,7 +15,7 @@
       <div class="barra-superior">
 
         <div class="contenedor-superior">
-
+          
             <!-- Migas de pan -->
             <div class="contenedor-migasdepan">
               <MigaMain />
@@ -28,8 +28,8 @@
                 <div class="icono-superior">
                     <span class="mb-0 material-icons material-icons--boton-sup">add</span>
                 </div>
-              </div> <!-- FIN Botones con funciones -->
-            </div>
+              </div> <!-- FIN Boton para crear elementos -->
+            </div> <!-- FIN Botones con funciones -->
 
         </div>
 
@@ -39,11 +39,9 @@
       <div class="seccion-central">
         <!-- Grilla dinamica -->
         <div class="grilla-responsive">
-          <Tarjeta v-for="item, index in items" :key="index" :item="item"/>
+          <Tarjeta v-for="item, index in items" :key="index" :index="index" :item="item"/>
         </div> <!-- FIN Grilla dinamica -->
-
       </div> <!-- FIN Contenido luego de las migas de pan (Cartas) -->
-
 
     </main> <!-- FIN Contenido principal de la pagina -->
   </div>
@@ -67,8 +65,10 @@ export default {
         { book_title: 'Science & Technology', book_author: 'Ravi Agrahari', image:'placeholder.png'},
         { book_title: 'Introducing Go', book_author: 'Caleb Doxsey', image:'placeholder.png'},
         { book_title: 'Programa o serás programado', book_author: 'Douglas Rushkoff', image:'placeholder.png'},
-        { book_title: 'New Yorker Issue Vol 85-26', book_author: 'The New Yorker', image:'placeholder.png'}
-      ],
+        { book_title: 'New Yorker Issue Vol 85-26', book_author: 'The New Yorker', image:'placeholder.png'},
+        
+        
+      ]
     }
   },
 };
@@ -110,10 +110,8 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
-
     height: 100%;
 }
-/* Botones superiores */
 .contenedor-botonessuperiores {
     display: flex;
     flex-direction: row;
@@ -124,7 +122,7 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #03DAC5;
+    background-color: #ff6c38;
     width: 2.375rem;
     height: 2.375rem;
     border-radius: 4px;
@@ -133,7 +131,7 @@ export default {
     cursor: pointer;
 }
 .boton__crear:hover {
-    background-color: #07bba9;
+    background-color: #db5f32;
 }
 .icono-superior {
     display: flex;

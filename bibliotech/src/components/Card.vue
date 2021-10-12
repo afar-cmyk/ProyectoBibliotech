@@ -16,12 +16,94 @@
       </div>
       <!-- Seccion inferior de la carta -->
       <div class="carta-footer">
-          <div class="carta-footer__botones">
-              <a class="carta-footer__botones carta-footer__botones--cancelar"
-                href="">Borrar</a>
-              <input class="carta-footer__botones carta-footer__botones--boton" type="submit"
-                value="EDITAR" >
+        <div class="carta-footer__botones">
+          <a class="carta-footer__botones carta-footer__botones--cancelar"
+            href="">Borrar</a>
+          <!-- <input class="carta-footer__botones carta-footer__botones--boton" type="submit"
+            value="EDITAR" > -->
+          <div>
+            <b-button v-b-modal="`modal-${index}`" @click="editItem()"  class="carta-footer__botones carta-footer__botones--boton">Editar</b-button>
+            <b-modal class="titulo-modal" :id="`modal-${index}`" :title="`Editando: ${form.book_title}`" hide-footer>
+              <!-- <p class="my-4">{{item}}</p> -->
+              <b-form @submit="onSubmit">   
+
+                <!--
+                <b-form-group id="input-group-2" label="Nombre:" label-for="input-2">
+                  <b-form-input
+                    id="input-2"
+                    v-model="form.book_title"
+                    placeholder="Enter name"
+                    required
+                  ></b-form-input>
+                </b-form-group> -->
+
+                <b-container>
+                  
+                  <b-row>
+                    <b-col>
+                      <div class="form-floating mt-4 mb-4">
+                            <input type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                            <label label for="mb-0 floatingInput" class="text-secondary">ISBN</label>
+                        </div>
+                    </b-col>
+                  </b-row>
+
+                  <b-row>
+                    <b-col>
+                      <div class="form-floating mb-4">
+                            <input v-model="form.book_title" type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                            <label label for="mb-0 floatingInput" class="text-secondary">Nombre del artículo</label>
+                        </div>
+                    </b-col>
+                  </b-row>
+
+                  <b-row>
+                    <b-col>
+                      <div class="form-floating mb-4">
+                            <input v-model="form.book_author" type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                            <label label for="mb-0 floatingInput" class="text-secondary">Nombre del autor</label>
+                        </div>
+                    </b-col>
+                  </b-row>
+
+                  <b-row>
+                    <b-col>
+                      <div class="form-floating mb-4">
+                            <input type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                            <label label for="mb-0 floatingInput" class="mb-0 text-secondary">Nombre de la editorial</label>
+                        </div>
+                    </b-col>
+                  </b-row>
+
+                  <b-row>
+                    <b-col>
+                      <div class="form-floating">
+                            <select class="mb-0 selector form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <option selected>Seleccione una categoria</option>
+                                <option value="1">Académico</option>
+                                <option value="2">Digital</option>
+                                <option value="3">Ilustración</option>
+                                <option value="4">Manual</option>
+                                <option value="5">Revista</option>
+                            </select>
+                            <label for="floatingSelectGrid">Categoria</label>
+                        </div>
+                    </b-col>
+                  </b-row>
+
+                  
+
+
+                </b-container>
+
+                <div class="mt-4 text-center">
+                  <b-button class="boton-modal-b mb-0" variant="danger" @click="$bvModal.hide(`modal-${index}`)">Cancelar</b-button>
+                  <b-button type="submit" variant="success" class="boton-modal-a mb-0">Actualizar</b-button>
+                </div>
+              </b-form>
+            </b-modal>
           </div>
+        </div>
       </div>
   </div>
 </template>
@@ -32,7 +114,36 @@ export default {
       type: Object,
       default: () => {}
     },
-  }
+    index: {
+      type:Number,
+      default: () => 1
+    }
+  },
+  data() {
+    return {
+      form: {
+        book_isbn: '',
+        book_title: '',
+        book_author: '',
+        book_publisher: '',
+        book_genre: ''
+      }
+    }
+  },
+  methods: {
+    editItem() {
+      console.log(this.item)
+      this.form.book_isbn = this.item.book_isbn,
+      this.form.book_title = this.item.book_title,
+      this.form.book_author = this.item.book_author,
+      this.form.book_publisher = this.item.book_publisher,
+      this.form.book_genre = this.item.book_genre
+    },
+    onSubmit(event) {
+      event.preventDefault()
+      alert(JSON.stringify(this.form))
+    },
+  },
 }
 </script>
 <style scoped>
@@ -71,7 +182,7 @@ export default {
 }
 .carta-header__texto--subtitulo {
   font-family: "Roboto";
-  font-size: 0.75rem;
+  font-size: 0.80rem;
   font-weight: 300;
   padding: 0%;
   margin: 0%;
@@ -112,27 +223,46 @@ export default {
 }
 .carta-footer__botones--cancelar {
   font-family: 'Roboto', sans-serif;
-  color: #FF6C38;
-  font-size: 0.80rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #FFFFFF;
   text-decoration: none;
+  background-color: #ad0202;
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 6px;
 }
 .carta-footer__botones--cancelar:hover {
-  color: #da5e31;
+  background-color: #8f0303;
 }
 .carta-footer__botones--boton {
   font-family: 'Roboto', sans-serif;
   border-radius: 4px;
-  font-size: 0.625rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 400;
   color: #FFFFFF;
   background-color: #485EB2;
-  margin-left: 7px;
-  padding: 6px;
+  padding: 5px;
   border: none;
   outline: none;
   cursor: pointer;
 }
 .carta-footer__botones--boton:hover {
   background-color: #3f529c;
+}
+.titulo-modal{
+  font-family: 'Roboto', sans-serif !important;
+}
+.boton-modal-a{
+  background-color: #485EB2;
+  border: none;
+  margin-left: 12px;
+}
+.boton-modal-b{
+  background-color: #ad0202;
+  border: none;
 }
 </style>
