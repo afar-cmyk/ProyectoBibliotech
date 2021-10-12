@@ -159,13 +159,14 @@ export default {
   padding-right: 65px;
 }
 .boton__entrar {
-  background-color: #c30000;
+  background-color: #c30000 !important;
+  border: 1px solid #c30000 !important;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   line-height: 18px;
 }
 .boton__entrar:hover {
-  background-color: #990000;
+  background-color: #990000 !important;
 }
 .cc-footer {
   z-index: 2;
