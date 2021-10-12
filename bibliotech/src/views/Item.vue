@@ -18,7 +18,7 @@
           
             <!-- Migas de pan -->
             <div class="contenedor-migasdepan">
-              <MigaMain :index="index" />
+              <MigaMain  />
             </div> <!-- FIN Migas de pan -->
             
             <!-- Botones con funciones -->
@@ -42,7 +42,7 @@
 <script>
 import SideBar from "../components/SideBar.vue"
 import Tarjeta from "../components/contentManagers/CardEditItem.vue"
-import NuevoItem from "../components/contentManagers/NewItem.vue"
+
 import Miga from "../components/BreadCrumbsLinks.vue"
 import MigaMain from "../components/BreadCrumbsMain.vue"
 
@@ -51,8 +51,7 @@ export default {
     SideBar,
     Tarjeta,
     Miga,
-    MigaMain,
-    NuevoItem
+    MigaMain
   },
   data() {
     return {
