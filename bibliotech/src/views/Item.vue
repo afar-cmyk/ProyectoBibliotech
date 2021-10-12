@@ -22,7 +22,7 @@
             </div> <!-- FIN Migas de pan -->
             
             <!-- Botones con funciones -->
-            <BotonNuevo  />
+            <BotonNuevo />
 
         </div>
 

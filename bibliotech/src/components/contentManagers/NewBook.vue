@@ -2,13 +2,15 @@
     <div class="contenedor-botonessuperiores">
 
               <!-- Boton para crear elementos -->
-              <div v-b-modal="`modal-${index}` " @click="editItem()" class="boton__crear">
+              <div v-b-modal.modal-creation  class="boton__crear">
+                <!-- <div v-b-modal="`modal-${index}` " @click="editItem()" class="boton__crear"> -->
                 <div class="icono-superior">
                     <span class="mb-0 material-icons material-icons--boton-sup">add</span>
                 </div>
               </div> <!-- FIN Boton para crear elementos -->
 
-    <b-modal class="titulo-modal" :id="`modal-${index}`" title="Nuevo Artículo" hide-footer>
+    <b-modal id="modal-creation" title="Nuevo Artículo" hide-footer centered>
+      <!-- <b-modal class="titulo-modal" :id="`modal-${index}`" title="Nuevo Artículo" hide-footer> -->
 
         <b-form @submit="onSubmit">   
         <b-container>  
