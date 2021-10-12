@@ -22,7 +22,7 @@
             </div> <!-- FIN Migas de pan -->
             
             <!-- Botones con funciones -->
-            <NuevoItem  />
+            <BotonNuevo  />
 
         </div>
 
@@ -42,16 +42,17 @@
 <script>
 import SideBar from "../components/SideBar.vue"
 import Tarjeta from "../components/contentManagers/CardEditItem.vue"
-
 import Miga from "../components/BreadCrumbsLinks.vue"
 import MigaMain from "../components/BreadCrumbsMain.vue"
+import BotonNuevo from "../components/contentManagers/NewBook.vue"
 
 export default {
   components: {
     SideBar,
     Tarjeta,
     Miga,
-    MigaMain
+    MigaMain,
+    BotonNuevo
   },
   data() {
     return {
