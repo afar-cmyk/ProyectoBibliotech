@@ -18,7 +18,7 @@
 
             <!-- Envoltura para las cajas -->
             <div class="caja__cartas">
-              <Tarjeta v-for="item, index in items" :key="index" :item="item"/>
+              <Tarjeta v-for="item, index in items" :key="index" :index="index" :item="item"/>
             </div> <!-- FIN Envoltura para las cajas -->
 
           </div>
@@ -38,7 +38,7 @@
 
             <!-- Envoltura para las cajas -->
             <div class="caja__cartas">
-              <TarjetaAdmin v-for="admin, index in admins" :key="index" :admin="admin"/>
+              <TarjetaAdmin v-for="admin, index in admins" :key="index" :index="index" :admin="admin"/>
             </div> <!-- FIN Envoltura para las cajas -->
 
           </div>
@@ -50,8 +50,8 @@
 </template>
 <script >
 import SideBar from "../components/SideBar.vue"
-import Tarjeta from "../components/Card.vue"
-import TarjetaAdmin from "../components/CardAdmin.vue"
+import Tarjeta from "../components/contentManagers/CardEditItem.vue"
+import TarjetaAdmin from "../components/contentManagers/CardEditAdmin.vue"
 
 export default {
   components: {

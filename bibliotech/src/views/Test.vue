@@ -25,7 +25,7 @@
 
       <!-- Contenido luego de las migas de pan (Cartas) -->
       <div class="seccion-central d-flex justify-content-center">
-          <NewItem />
+          <CardNewItem />
       </div> <!-- FIN Contenido luego de las migas de pan (Cartas) -->
 
     </main> <!-- FIN Contenido principal de la pagina -->
@@ -35,13 +35,13 @@
 <script>
 import SideBar from  "../components/SideBar.vue"
 import MigasLinks from "../components/BreadCrumbsLinks.vue"
-import NewItem from "../components/contentManagers/NewItem.vue"
+
 
 export default {
   components: {
     SideBar,
     MigasLinks,
-    NewItem
+
   }
 };
 </script>

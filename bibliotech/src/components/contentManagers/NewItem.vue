@@ -1,108 +1,163 @@
 <template>
-    <!-- Recuadro que contiene a todos los elementos del formulario -->
-            <b-container class="formulario-base d-flex flex-wrap">
-                <b-row>
-                    <b-col class="formulario-base-lado">
-                        <div class="form-floating mt-0 mb-5">
-                            <input type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
-                            <label label for="mb-0 floatingInput" class="text-secondary">ISBN</label>
-                        </div>
+    <div class="contenedor-botonessuperiores">
 
-                        <div class="form-floating mb-5">
-                            <input type="email" class="mb-0 form-control" id="floatingInput" placeholder="">
-                            <label label for="mb-0 floatingInput" class="text-secondary">Nombre del artículo</label>
-                        </div>
+              <!-- Boton para crear elementos -->
+              <div v-b-modal="`modal-${index}` " @click="editItem()" class="boton__crear">
+                <div class="icono-superior">
+                    <span class="mb-0 material-icons material-icons--boton-sup">add</span>
+                </div>
+              </div> <!-- FIN Boton para crear elementos -->
 
-                        <div class="form-floating">
-                            <input type="email" class="mb-0 form-control" id="floatingInput" placeholder="">
-                            <label label for="mb-0 floatingInput" class="text-secondary">Nombre del autor</label>
-                        </div>
-                    </b-col>
+    <b-modal class="titulo-modal" :id="`modal-${index}`" title="Nuevo Artículo" hide-footer>
 
-                    <b-col class="formulario-base-lado">
-                        <div class="form-floating mt-0 mb-5">
-                            <input type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
-                            <label label for="mb-0 floatingInput" class="mb-0 text-secondary">Nombre de la editorial</label>
-                        </div>
+        <b-form @submit="onSubmit">   
+        <b-container>  
+            <b-row>
+            <b-col>
+                <div class="form-floating mt-4 mb-4">
+                    <input v-model="form.book_isbn" type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                    <label label for="mb-0 floatingInput" class="text-secondary">ISBN</label>
+                </div>
+            </b-col>
+            </b-row>
 
-                        <div class="form-floating">
-                            <select class="mb-0 selector form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                                <option selected>Seleccione una categoria</option>
-                                <option value="1">Académico</option>
-                                <option value="2">Digital</option>
-                                <option value="3">Ilustración</option>
-                                <option value="4">Manual</option>
-                                <option value="5">Revista</option>
-                            </select>
-                            <label for="floatingSelectGrid">Categoria</label>
-                        </div>
-                    </b-col>
-                </b-row>
+            <b-row>
+            <b-col>
+                <div class="form-floating mb-4">
+                    <input v-model="form.book_title" type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                    <label label for="mb-0 floatingInput" class="text-secondary">Nombre del artículo</label>
+                </div>
+            </b-col>
+            </b-row>
 
-                <b-row class="contenedor-formulario-footer">
+            <b-row>
+            <b-col>
+                <div class="form-floating mb-4">
+                    <input v-model="form.book_author" type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                    <label label for="mb-0 floatingInput" class="text-secondary">Nombre del autor</label>
+                </div>
+            </b-col>
+            </b-row>
 
-                </b-row>
-            </b-container >
-            <!-- FIN Recuadro que contiene a todos los elementos del formulario -->
+            <b-row>
+            <b-col>
+                <div class="form-floating mb-4">
+                    <input v-model="form.book_publisher" type="text" class="mb-0 form-control" id="floatingInput" placeholder="">
+                    <label label for="mb-0 floatingInput" class="mb-0 text-secondary">Nombre de la editorial</label>
+                </div>
+            </b-col>
+            </b-row>
+
+            <b-row>
+            <b-col>
+                <div class="form-floating">
+                    <select class="mb-0 selector form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                        <option selected>Seleccione una categoria</option>
+                        <option value="1">Académico</option>
+                        <option value="2">Digital</option>
+                        <option value="3">Ilustración</option>
+                        <option value="4">Manual</option>
+                        <option value="5">Revista</option>
+                    </select>
+                    <label for="floatingSelectGrid">Categoria</label>
+                </div>
+            </b-col>
+            </b-row>
+        </b-container>
+
+        <div class="mt-4 text-center">
+            <b-button class="boton-modal-b mb-0" variant="danger" @click="$bvModal.hide(`modal-${index}`)">Volver</b-button>
+            <b-button type="submit" variant="success" class="boton-modal-a mb-0">Crear</b-button>
+        </div>
+        </b-form>
+    </b-modal>
+    </div>
 </template>
-
+<script>
+export default {
+  props: {
+    item: {
+      type: Object,
+      default: () => {}
+    },
+    index: {
+      type:Number,
+      default: () => 1
+    }
+  },
+  data() {
+    return {
+      form: {
+        book_isbn: '',
+        book_title: '',
+        book_author: '',
+        book_publisher: '',
+        book_genre: ''
+      }
+    }
+  },
+  methods: {
+    editItem() {
+      console.log(this.item)
+      this.form.book_isbn = this.item.book_isbn,
+      this.form.book_title = this.item.book_title,
+      this.form.book_author = this.item.book_author,
+      this.form.book_publisher = this.item.book_publisher,
+      this.form.book_genre = this.item.book_genre
+    },
+    onSubmit(event) {
+      event.preventDefault()
+      alert(JSON.stringify(this.form))
+    },
+  },
+}
+</script>
 <style scoped>
-.formulario-base {
-    display: flex !important;
-    background-color: rgb(255, 255, 255);
-    width: 53rem;
-    height: 25rem;
-    border-radius: 4px;
-    border: 1px solid #0000001F;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    font-weight: 300;
-    font-family: 'Roboto', sans-serif;
-}
-.formulario-base-lado{
-    width: 26.5rem;
-    height: 21.438rem;
-    padding-top: 2.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    box-sizing: border-box;
-}
-.contenedor-formulario-footer {
-    width: 100%;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    border-top: 1px solid #0000001F;
-    box-sizing: border-box;
-}
-.contenedor-botones {
+.contenedor-botonessuperiores {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    padding-right: 2.5rem;
+    height: 100%;
 }
-.contenedor-botones input {
-    margin-left: 0.625rem;
-}
-.enlace-cancelar {
-    color: #FF6C38;
-    font-size: 0.875rem;
-    text-decoration: none;
-    margin-bottom: 3px;
-}
-.enlace-cancelar:hover {
-    color: #da5e31;
-}
-.formulario__boton-crear {
-    width: 5rem;
-    height: 2.5rem;
+.boton__crear {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ff6c38;
+    width: 2.375rem;
+    height: 2.375rem;
     border-radius: 4px;
-    font-size: 0.875rem;
-    color: #FFFFFF;
-    background-color: #485EB2;
-    border: none;
-    outline: none;
-    margin-bottom: 3px;
+    box-sizing: border-box;
+    margin-right: 1.25rem;
     cursor: pointer;
 }
-.formulario__boton-crear:hover {
-    background-color: #3f529c;
+.boton__crear:hover {
+    background-color: #db5f32;
+}
+.icono-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.material-icons--boton-sup {
+    color: #FFFFFF;
+    font-size: 2.375rem;
+}
+.material-icons--boton-sup-fixed {
+    color: #FFFFFF;
+    font-size: 1.7rem;
+}
+.titulo-modal{
+  font-family: 'Roboto', sans-serif !important;
+}
+.boton-modal-a{
+  background-color: #485EB2;
+  border: none;
+  margin-left: 12px;
+}
+.boton-modal-b{
+  background-color: #ad0202;
+  border: none;
 }
 </style>

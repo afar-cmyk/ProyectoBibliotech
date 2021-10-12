@@ -18,18 +18,11 @@
           
             <!-- Migas de pan -->
             <div class="contenedor-migasdepan">
-              <MigaMain />
+              <MigaMain :index="index" />
             </div> <!-- FIN Migas de pan -->
             
             <!-- Botones con funciones -->
-            <div class="contenedor-botonessuperiores">
-              <!-- Boton para crear elementos -->
-              <div class="boton__crear" onclick="javascript:enlaceNuevoArticulo()">
-                <div class="icono-superior">
-                    <span class="mb-0 material-icons material-icons--boton-sup">add</span>
-                </div>
-              </div> <!-- FIN Boton para crear elementos -->
-            </div> <!-- FIN Botones con funciones -->
+            <NuevoItem  />
 
         </div>
 
@@ -48,7 +41,8 @@
 </template>
 <script>
 import SideBar from "../components/SideBar.vue"
-import Tarjeta from "../components/Card.vue"
+import Tarjeta from "../components/contentManagers/CardEditItem.vue"
+import NuevoItem from "../components/contentManagers/NewItem.vue"
 import Miga from "../components/BreadCrumbsLinks.vue"
 import MigaMain from "../components/BreadCrumbsMain.vue"
 
@@ -57,7 +51,8 @@ export default {
     SideBar,
     Tarjeta,
     Miga,
-    MigaMain
+    MigaMain,
+    NuevoItem
   },
   data() {
     return {
@@ -65,9 +60,7 @@ export default {
         { book_title: 'Science & Technology', book_author: 'Ravi Agrahari', image:'placeholder.png'},
         { book_title: 'Introducing Go', book_author: 'Caleb Doxsey', image:'placeholder.png'},
         { book_title: 'Programa o serás programado', book_author: 'Douglas Rushkoff', image:'placeholder.png'},
-        { book_title: 'New Yorker Issue Vol 85-26', book_author: 'The New Yorker', image:'placeholder.png'},
-        
-        
+        { book_title: 'New Yorker Issue Vol 85-26', book_author: 'The New Yorker', image:'placeholder.png'}
       ]
     }
   },
