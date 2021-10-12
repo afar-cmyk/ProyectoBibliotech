@@ -18,7 +18,7 @@
           
             <!-- Migas de pan -->
             <div class="contenedor-migasdepan">
-              <MigaMain  />
+              <MigaMain title="Artículos" />
             </div> <!-- FIN Migas de pan -->
             
             <!-- Botones con funciones -->
