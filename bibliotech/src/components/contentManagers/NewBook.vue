@@ -159,9 +159,15 @@ export default {
       Swal.fire({
         title: "¿Desea crear este nuevo articulo?",
         showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: "Guardar",
-        denyButtonText: `No Guardar`,
+        confirmButtonText: "Sí",
+        denyButtonText: `No`,
+        confirmButtonColor: "#485eb2",
+        denyButtonColor: "#ad0202",
+        customClass: {
+          actions: 'my-actions',
+          confirmButton: 'order-3',
+          denyButton: 'order-2',
+        }
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
@@ -235,5 +241,14 @@ export default {
 .boton-modal-b {
   background-color: #ad0202;
   border: none;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
 }
 </style>
