@@ -1,14 +1,17 @@
 <template>
     <div class="container-migas d-flex flex-row align-items-center">
-        <p class="actual mb-0 texto-migas ">Artículos</p>
+        <p class="actual mb-0 texto-migas ">{{ title }}</p>
         <p class="separador mb-0 texto-migas">|</p>
     </div>
 </template>
 <script>
 export default {
-    setup() {
-        
-    },
+    props: {
+        title: {
+            type: String,
+            default: () => ''
+        }
+    }
 }
 </script>
 <style scoped>

@@ -260,9 +260,11 @@ export default {
   background-color: #485EB2;
   border: none;
   margin-left: 12px;
+  padding-top: 5px !important;
 }
 .boton-modal-b{
   background-color: #ad0202;
   border: none;
+  padding-top: 5px !important;
 }
 </style>
