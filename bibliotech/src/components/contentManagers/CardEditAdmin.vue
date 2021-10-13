@@ -193,9 +193,14 @@ export default {
         text: "¡No podrás revertir esto!",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
+        confirmButtonColor: "#485eb2",
+        cancelButtonColor: "#ad0202",
         confirmButtonText: "Si, eliminalo!",
+        customClass: {
+          actions: 'my-actions',
+          confirmButton: 'order-3',
+          cancelButton: 'order-2',
+        }
       }).then((result) => {
         if (result.isConfirmed) {
           this.axios.delete(this.url + id).then((response) => {
@@ -218,9 +223,15 @@ export default {
       Swal.fire({
         title: "¿Desea actualizar este usuario?",
         showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: "Actualizar",
-        denyButtonText: `No Actualizar`,
+        confirmButtonText: "Sí",
+        denyButtonText: `No`,
+        confirmButtonColor: "#485eb2",
+        denyButtonColor: "#ad0202",
+        customClass: {
+          actions: 'my-actions',
+          confirmButton: 'order-3',
+          denyButton: 'order-2',
+        }
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
@@ -359,5 +370,14 @@ export default {
   background-color: #ad0202;
   border: none;
   padding-top: 5px !important;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
 }
 </style>

@@ -120,7 +120,6 @@ export default {
 .barra-lateral {
   background-color: white;
   width: 16vw;
-  height: 100vh;
   border-right: 1px solid #0000001f;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.082), 0 1px 2px rgba(0, 0, 0, 0.158);
 }
@@ -130,20 +129,20 @@ export default {
   align-items: center;
   align-content: space-around;
   width: 84vw;
-  height: 100vh;
 }
 .seccion-central {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100vh;
-  padding: 5rem;
+  margin-top: 5rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
   box-sizing: border-box;
 }
 .segmentos-centrales {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   box-sizing: border-box;
 }
 .segmentos-centrales__contenedor {

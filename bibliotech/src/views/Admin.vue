@@ -101,7 +101,6 @@ export default {
   align-items: center;
   align-content: space-around;
   width: 84vw;
-  height: 100vh;
 }
 .barra-superior {
   display: flex;
@@ -234,7 +233,6 @@ export default {
   grid-gap: 1rem;
   grid-auto-flow: dense;
   justify-items: center;
-  overflow: hidden;
   box-sizing: border-box;
   padding-bottom: 40px;
 }
