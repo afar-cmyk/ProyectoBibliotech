@@ -55,13 +55,13 @@ export default {
   data() {
     return {
       admins: [
-        { admin_name: 'Garry', admin_username: 'garrygarrison', image:'placeholder.png'},
-        { admin_name: 'Maria', admin_username: 'marymaria', image:'placeholder.png'},
-        { admin_name: 'Pablo', admin_username: 'pablopablo', image:'placeholder.png'},
-        { admin_name: 'Dick', admin_username: 'dickdickenson', image:'placeholder.png'},
+        { username: 'garrygarrison', password: '12345', email: 'garrygarrison@gmail.com', name: 'Garry', lastname: 'Garrison', image:'placeholder.png'},
+        { username: 'maryjeane', password: '12345', email: 'maryjeane@gmail.com', name: 'Mary', lastname: 'Jeane', image:'placeholder.png'},
+        { username: 'pablopabliano', password: '12345', email: 'pablopabliano@gmail.com', name: 'Pablo', lastname: 'Pabliano', image:'placeholder.png'},
+        { username: 'dickdickenson', password: '12345', email: 'dickdickenson@gmail.com', name: 'Dick', lastname: 'Dickenson', image:'placeholder.png'}
       ]
     }
-  },
+  }
 };
 </script>
 <style scoped>

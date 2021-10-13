@@ -90,7 +90,7 @@ export default {
     }
   },
   methods: {
-    editItem() {
+    editAdmin() {
       console.log(this.admin)
       this.form.username = this.admin.username,
       this.form.password = this.admin.password,
