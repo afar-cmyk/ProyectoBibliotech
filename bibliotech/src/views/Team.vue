@@ -13,7 +13,7 @@
           <b-col cols="12" md="6" lg="4">
             <b-card>
               <div class="team-one">
-                <b-img :src="require('../assets/images/ex-photo-man.jpg')" />
+                <b-img :src="require('../assets/images/andres.jpg')" />
                 <b-text>
                   <h4 class="name">Andrés Felipe Álvarez</h4>
                   <p class="info">Tecnólogo en producción de Multimedia, apasionado por la fotografía y el diseño</p>

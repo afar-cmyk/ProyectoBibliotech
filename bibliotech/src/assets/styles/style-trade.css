@@ -47,6 +47,7 @@ Variaciones de transparencia:
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin: 2rem;
 }
 
@@ -60,7 +61,13 @@ Variaciones de transparencia:
 
 .box{
     margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+}
+
+@media(max-width:576px){
+    .box{
+        margin-bottom: 0.2rem;
+    }
 }
 
 .button{
