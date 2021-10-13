@@ -27,14 +27,16 @@
             </div>
             <!-- FIN Envoltura para las cajas -->
           </div>
-
           <!-- Separador central -->
           <div class="segmentos-centrales__separador">
             <div class="separador__caja"></div>
           </div>
           <!-- FIN Separador central -->
-
-          <!-- Contenedor rectangular que contiene a el titulo y a las tarjetas -->
+        </div>
+      </div>
+      <div class="seccion-central">
+        <div class="segmentos-centrales">
+        <!-- Contenedor rectangular que contiene a el titulo y a las tarjetas -->
           <div class="segmentos-centrales__contenedor">
             <!-- Titulo -->
             <div class="caja__titulo">
