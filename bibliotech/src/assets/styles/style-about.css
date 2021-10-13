@@ -22,14 +22,22 @@ Variaciones de transparencia:
     padding: 1rem;
 }
 
-.news1-bibliotech img{
-    filter: brightness(60%);
-}
-
 .btn-plus{
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
     color: #FFF;
+}
+
+.know-b{
+    width: 65%;
+    margin-left: 8rem;
+}
+
+@media (max-width: 768px){
+    .know-b{
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 .news2-text p{
@@ -45,7 +53,7 @@ Variaciones de transparencia:
     color: #003582;
 }
 
-.news3-how img{
+.news3-how img:hover{
     filter: brightness(60%);
 }
 
@@ -55,10 +63,9 @@ Variaciones de transparencia:
     font-weight: 700;
     font-size: 0.9rem;
     color: #FFF;
-    margin-top: 5rem;
 }
 
-.news4-prog img{
+.news4-prog img:hover{
     filter: brightness(60%);
 }
 
@@ -68,7 +75,6 @@ Variaciones de transparencia:
     font-weight: 700;
     font-size: 0.9rem;
     color: #FFF;
-    margin-top: 5rem;
 }
 
 .title-modal{

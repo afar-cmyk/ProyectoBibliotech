@@ -13,8 +13,10 @@
           <b-col cols="12" md="6" lg="6">
             <!--Se añade require porque no lee este tipo de componente de Bootstrap-->
             <b-card class="news1-bibliotech" overlay :img-src="require('../assets/images/library.png')" img-alt="Una Biblioteca">
-              <b-button v-b-modal.modal-news3 class="btn-plus">Conoce +</b-button>
-              <!--Dirige a una presentación-->
+              <b-button v-b-modal.modal-bibliotech class="btn-plus">Conozca +</b-button>
+              <b-modal id="modal-bibliotech" size="lg" centered ok-only hide-footer>
+                <img class="know-b" src="../assets/images/knowb.jpg" alt="Conozca a Bibliotech">
+              </b-modal>
             </b-card>
           </b-col>
           <!--Noticia 2-->
@@ -92,7 +94,7 @@ export default {
   }
 }
 </script>
-<style>
+<style>/*Los important no se leen en scoped*/
 .rows-news{
     background-color: #f3f3f3 !important;
 }
@@ -114,14 +116,14 @@ export default {
 .card{
     background-color: #f3f3f3 !important;
 }
+.card-img{
+    filter: brightness(20%);
+}
 .news2-text{
     border: none !important;
 }
 .btn-secondary{
     background-color: #485eb2 !important;
     border: 1px solid #485eb2 !important;
-}
-.modal-backdrop{
-    background-color: #FFF !important;
 }
 </style>

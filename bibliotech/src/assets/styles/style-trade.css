@@ -97,6 +97,7 @@ Variaciones de transparencia:
 
 .data-book{
     width: 50%;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -106,7 +107,7 @@ Variaciones de transparencia:
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #003582;
-    margin: 0.1rem;
+    margin: 0.3rem;
     padding: 0rem;
 }
 
@@ -151,10 +152,12 @@ Variaciones de transparencia:
 
 .confirmed-text{
     padding-top: 2rem;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     color: #003582;
+    animation: visibility 1s linear;
 }
 
 .confirmed-icon{
@@ -162,4 +165,36 @@ Variaciones de transparencia:
     color: rgb(115, 255, 0);
     border-radius: 10rem;
     text-align: center;
+    animation: bounce 0.7s linear;
 }
+
+@keyframes bounce{
+    0%{
+        transform: scale(0%);
+        opacity: 0;
+    }
+    70%{
+        transform: scale(100%);
+    }
+    90%{
+        transform: scale(60%);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 0.9;
+    }
+}
+
+@keyframes visibility{
+    0%{
+        opacity: 0;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}
+

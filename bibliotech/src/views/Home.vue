@@ -7,16 +7,15 @@
           <h1>¡Bienvenido!</h1>
           <h3>a nuestro sistema bibliotecario</h3>
       </div>
-      <b-container fluid>
-        <!--Sección para imagen central de los libros de Bibliotech-->
-        <b-row class="banner-image">
-          <b-col cols="12" md="12" lg="6">
-            <img class="banner-image1" src="../assets/images/index-image1.png" fluid alt="Banner de inicio"/>
-          </b-col>
-          <b-col cols="12" md="12" lg="6">
-            <img class="banner-image2" src="../assets/images/index-image2.png" fluid alt="Banner de inicio"/>
-          </b-col>
-        </b-row>
+      <b-container fluid-grow>
+        <!--Sección para imagen y video central de los libros de Bibliotech-->
+        <row class="banner-video">
+          <div class="video-container">
+            <video autoplay muted loop poster="../assets/images/banner.png">
+              <source src="../assets/images/banner-video.mp4" type="video/mp4">
+            </video>
+          </div>
+        </row>
         <!--Saludo e invitación a ir a préstamo-->
         <div class="banner-text">
           <h3>¡Hola!</h3>
@@ -25,6 +24,7 @@
             <router-link to="Trade">Préstamo</router-link>
           </div>
         </div>
+        <div class="space" /> 
       </b-container>
     </main>
     <Footer />
