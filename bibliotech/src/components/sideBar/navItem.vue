@@ -30,3 +30,30 @@ export default {
     }
 }
 </script>
+<style>
+@media (min-width: 1234px) { 
+  .usuario_titulo {
+    font-size: 80%;
+  }
+  .sideBar_elemento__titulo{
+        font-size: 93%;
+  }
+  
+}
+@media (min-width: 1367px) { 
+  .sideBar_elemento__titulo{
+        font-size: 100%;
+  }
+}
+@media (max-width: 1233px) { 
+  .sideBar_elemento__titulo {
+    display: none !important;
+  }
+.sideBar_elemento{
+    justify-content: space-around;
+}
+.sideBar_elemento__icono{
+    margin-right: 0;
+}
+}
+</style>

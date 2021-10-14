@@ -178,4 +178,19 @@ export default {
   height: 1px;
   width: 100%;
 }
+@media (min-width: 768px) { 
+  .contenido{
+    background-color: black;
+  }
+}
+@media (min-width: 1233px) { 
+.contenido{
+    background-color: rgb(17, 0, 255);
+  }
+}
+@media (min-width: 1366px) { 
+ .contenido{
+    background-color: rgb(9, 255, 0);
+  }
+}
 </style>
