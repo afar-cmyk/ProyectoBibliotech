@@ -48,7 +48,7 @@
               ha generado un interés de los participantes, por los libros; las solicitudes
               han aumentado desde su inicio a finales de septiembre de 2021, la gente quiere leer 
               y este sistema ha permitido el acceso a una gran colección de ejemplares que pueden obtener
-              de una manera sencilla y gratuita.<br />
+              de una manera sencilla y gratuita.<br /><br />
               Además, el sitio brinda ejemplares de enseñanza en ciencia y tecnología que abren paso al aprendizaje
               en estas áreas, los libros acercan a la tecnología y la tecnología le da un nuevo valor a los libros.<br /><br />
               Por: <i>Redacción Bibliotech</i>
@@ -70,7 +70,7 @@
               Bibliotech sigue acercando a la tecnología, el pasado 1 de octubre la alianza entre el gestor de bibliotecas y el
               ministerio TIC ha abierto un camino de enseñanza por medio de libros, e-books, manuales y revistas de programación, la idea 
               es acercar a todo público al proceso de aprendizaje de múltiples lenguajes de programación, desarrollo web y 
-              desarrollo movil. <br />
+              desarrollo movil. <br /><br />
               "Creemos que el aprendizaje debe ir más allá de la tecnología por eso los libros y manuales son imprescindibles
               en la enseñanza de programación y desarrollo, la llamada brecha digital se cierra con un buen nivel de práctica y teoría, por eso 
               nos alegra ser parte de este proceso" dijo el equipo creador de Bibliotech. <br /><br />

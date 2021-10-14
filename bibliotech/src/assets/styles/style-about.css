@@ -61,8 +61,13 @@ Variaciones de transparencia:
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 10px;
 }
 
 .news4-prog img:hover{
@@ -73,8 +78,13 @@ Variaciones de transparencia:
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 10px;
 }
 
 .title-modal{
@@ -90,6 +100,7 @@ Variaciones de transparencia:
     font-weight: 300;
     font-size: 1rem;
     padding: 2.2rem;
+    text-align: justify;
 }
 
 .text-modal i{
