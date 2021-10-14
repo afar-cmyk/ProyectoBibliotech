@@ -237,7 +237,7 @@ export default {
 }
 @media (min-width: 1234px) { 
   .grilla-responsive{
-  grid-template-columns: repeat(auto-fit, minmax(259px, 0.46fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 0.46fr));
   }
   .barra-lateral{
     height: 100%;
