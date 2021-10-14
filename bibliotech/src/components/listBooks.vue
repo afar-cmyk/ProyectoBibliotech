@@ -28,7 +28,6 @@
           <!--Esta categoría se pinta con la lista y cambiar el nombre de categoría en la que se está-->
         </div>
         <b-row class="row-books">
-          >
           <b-col
             cols="12"
             md="6"
@@ -120,10 +119,10 @@
             >
               <div class="confirmed-box">
                 <div class="box-check">
-                  <p class="confirmed-text">¡Su préstamo ha sido exitoso!</p>
                   <div class="confirmed-icon">
                     <b-icon icon="check-circle"></b-icon>
                   </div>
+                  <p class="confirmed-text">¡Su préstamo ha sido exitoso!</p>
                 </div>
               </div>
             </b-modal>
@@ -188,6 +187,9 @@ export default {
 };
 </script>
 <style scoped>
+.form-control{
+    border: 1px solid #ff3000 !important;
+}
 .btn-secondary {
   background-color: #485eb2 !important;
   border: 1px solid #485eb2 !important;
@@ -201,12 +203,12 @@ export default {
 }
 /*Organización de los libros*/
 .option-book {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .option-book:hover {
   background-color: #d6d6d669;
 }
 .img-option {
-  width: 50%;
+  width: 55%;
 }
 </style>

@@ -16,10 +16,10 @@
             <b-col cols="12" md="6" lg="3" class="icons-foot">
                <!--Lista de íconos-->
               <h2 class="contact">Contáctanos:</h2>
-              <a href="https://github.com/afar-cmyk/ProyectoBibliotech">
+              <a href="https://github.com/afar-cmyk/ProyectoBibliotech" target="_blank">
                 <b-icon class="git-icon" icon="github"></b-icon>
               </a>
-              <a href="https://web.telegram.org/z/#-540770927">
+              <a href="https://web.telegram.org/z/#-540770927" target="_blank">
                 <b-icon class="tel-icon" icon="telephone"></b-icon>
               </a>
             </b-col>
