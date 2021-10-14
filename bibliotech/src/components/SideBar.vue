@@ -131,6 +131,7 @@ export default {
     font-size: 80%;
   }
   
+  
 }
 @media (min-width: 1367px) { 
   .usuario_titulo {
@@ -139,6 +140,7 @@ export default {
   .sideBar_elemento__titulo{
         font-size: 90%;
   }
+  
 }
 @media (max-width: 1233px) { 
   .contenedor-header__usuario {
@@ -147,6 +149,7 @@ export default {
   .contenedor-header{
     height: 8vw;
   }
+  
 }
 @media (min-width: 768px) and (max-width: 1233px) {
   .contenedor-header__logo{

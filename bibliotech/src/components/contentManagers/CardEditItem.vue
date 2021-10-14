@@ -276,7 +276,9 @@ export default {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  width: 316px;
+  max-width: 316px;
+  min-width: 286px;
+  width: 20vw;
   height: 280px;
   border-radius: 7px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -285,7 +287,6 @@ export default {
 }
 .carta-header {
   height: 68px;
-  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -325,17 +326,14 @@ export default {
   justify-content: center;
   overflow: hidden;
   max-height: 174px;
-  max-width: 316px;
+  width: 100%;
   box-sizing: border-box;
 }
 .carta-body img {
-  max-width: 100%;
   height: auto;
-  width: 316px;
 }
 .carta-footer {
   height: 40px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -385,10 +383,12 @@ export default {
   background-color: #485eb2;
   border: none;
   margin-left: 12px;
+  padding-top: 5px !important;
 }
 .boton-modal-b {
   background-color: #ad0202;
   border: none;
+  padding-top: 5px !important;
 }
 .order-1 {
   order: 1;
