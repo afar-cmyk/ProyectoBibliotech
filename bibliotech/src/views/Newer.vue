@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex">
+  <div class="d-flex ">
     <!-- Barra de navegación -->
     <aside class="d-flex flex-column barra-lateral">
       <SideBar :option="1" />
@@ -17,7 +17,7 @@
             <!-- FIN Titulo -->
 
             <!-- Envoltura para las cajas -->
-            <div class="caja__cartas">
+            <div class="grilla-responsive">
               <Tarjeta
                 v-for="(articulo, index) in articulos"
                 :key="index"
@@ -44,16 +44,32 @@
             </div>
             <!-- FIN Titulo -->
 
-            <!-- Envoltura para las cajas -->
-            <div class="caja__cartas">
-              <TarjetaAdmin
+
+              <div class="grilla-responsive">
+                <TarjetaAdmin
                 v-for="(admin, index) in admins"
                 :key="index"
                 :index="index"
                 :admin="admin"
               />
-            </div>
-            <!-- FIN Envoltura para las cajas -->
+              </div>
+
+
+
+
+            <!-- Envoltura para las cajas -->
+              <!-- <div class="caja__cartas"> 
+              <TarjetaAdmin
+                v-for="(admin, index) in admins"
+                :key="index"
+                :index="index"
+                :admin="admin"
+              /> -->
+            <!-- </div> FIN Envoltura para las cajas -->
+
+
+
+
           </div>
         </div>
       </div>
@@ -135,9 +151,9 @@ export default {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  margin-top: 5rem;
-  padding-right: 5rem;
-  padding-left: 5rem;
+  margin-top: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   box-sizing: border-box;
 }
 .segmentos-centrales {
@@ -164,10 +180,15 @@ export default {
   letter-spacing: 0.016rem;
 }
 .caja__cartas {
+  background-color: blue;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
+}
+
+.caja__cartas2{
+  background-color: rgb(57, 20, 220);
 }
 .segmentos-centrales__separador {
   background-color: #0000001f;
@@ -177,5 +198,66 @@ export default {
 .separador__caja {
   height: 1px;
   width: 100%;
+}
+@media (min-width: 768px) { 
+  .contenido{
+    background-color: rgb(255, 255, 255);
+  }
+}
+@media (min-width: 1233px) { 
+.contenido{
+    background-color: rgb(255, 255, 255);
+  }
+}
+@media (min-width: 1366px) { 
+ .contenido{
+    background-color: rgb(255, 255, 255);
+  }
+}
+.caja__cartas1{
+  background-color: crimson;
+
+  margin-right: 10px;
+}
+.cuadricula-tarjeta{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.grilla-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 0.46fr));
+  grid-template-rows: repeat(1, 300px);
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+  justify-items: center;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+@media (min-width: 1234px) { 
+  .grilla-responsive{
+  grid-template-columns: repeat(auto-fit, minmax(260px, 0.46fr));
+  }
+  .barra-lateral{
+    height: 100%;
+  }
+}
+@media (max-width: 1233px) { 
+ .barra-lateral{
+    height: 100%;
+  }
+}
+@media (min-width: 1367px) { 
+  .grilla-responsive{
+  grid-template-columns: repeat(auto-fit, minmax(320px, 0.46fr));
+}
+.barra-lateral{
+    height: 100%;
+  }
+}
+@media (min-width: 1658px) { 
+.barra-lateral{
+    height: 51vw;
+  }
 }
 </style>

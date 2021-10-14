@@ -14,4 +14,14 @@
   font-weight: 300;
   color: #7e7e7e;
 }
+@media (min-width: 1234px) { 
+  .usuario-label-texto {
+    font-size: 70%;
+  }
+}
+@media (min-width: 1367px) { 
+  .usuario-label-texto {
+    font-size: 100%;
+  }
+}
 </style>

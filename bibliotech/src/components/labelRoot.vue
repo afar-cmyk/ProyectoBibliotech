@@ -14,4 +14,9 @@
   font-weight: 300;
   color: #7e7e7e;
 }
+@media (min-width: 1233px) and (max-width: 1366px) { 
+  .usuario-label-texto {
+    font-size: 70%;
+  }
+}
 </style>

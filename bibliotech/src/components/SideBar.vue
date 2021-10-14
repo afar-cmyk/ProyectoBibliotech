@@ -101,6 +101,7 @@ export default {
 }
 .usuario_titulo {
   font-family: "Roboto", sans-serif;
+  font-size: 100%;
   font-weight: 400;
   margin-bottom: 0;
 }
@@ -124,5 +125,46 @@ export default {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   box-sizing: border-box;
+}
+@media (min-width: 1234px) { 
+  .usuario_titulo {
+    font-size: 80%;
+  }
+  
+  
+}
+@media (min-width: 1367px) { 
+  .usuario_titulo {
+    font-size: 100%;
+  }
+  .sideBar_elemento__titulo{
+        font-size: 90%;
+  }
+  
+}
+@media (max-width: 1233px) { 
+  .contenedor-header__usuario {
+    display: none !important;
+  }
+  .contenedor-header{
+    height: 8vw;
+  }
+  
+}
+@media (min-width: 768px) and (max-width: 1233px) {
+  .contenedor-header__logo{
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-header__logo{
+    padding-top: 0.8rem;
+  }
+}
+@media (max-width: 560px) {
+  .contenedor-header__logo{
+    padding-top: 4%;
+  }
 }
 </style>
