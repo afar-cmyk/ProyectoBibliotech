@@ -13,7 +13,7 @@
         <div class="contenedor-superior">
           <!-- Migas de pan -->
           <div class="contenedor-migasdepan">
-            <MigaMain title="Administradores" />
+            <MigaMain title="Admins" />
           </div>
           <!-- FIN Migas de pan -->
 

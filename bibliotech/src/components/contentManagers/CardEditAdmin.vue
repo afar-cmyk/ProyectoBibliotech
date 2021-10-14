@@ -27,14 +27,14 @@
         >
         <div>
           <b-button
-            v-b-modal="`modal-${index}`"
+            v-b-modal="`modal-admin-${index}`"
             @click="editAdmin()"
             class="carta-footer__botones carta-footer__botones--boton"
             >Editar</b-button
           >
           <b-modal
             class="titulo-modal"
-            :id="`modal-${index}`"
+            :id="`modal-admin-${index}`"
             :title="`Editando: ${form.nombre} ${form.apellido}`"
             hide-footer
           >
