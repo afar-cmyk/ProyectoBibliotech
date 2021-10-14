@@ -152,8 +152,8 @@ export default {
   width: 100%;
   height: 100vh;
   margin-top: 3rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   box-sizing: border-box;
 }
 .segmentos-centrales {

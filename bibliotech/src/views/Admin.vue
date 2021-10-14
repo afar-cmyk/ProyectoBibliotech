@@ -218,12 +218,11 @@ export default {
   padding-right: 2rem;
 }
 /* FIN migas de pan */
-
 .seccion-central {
   width: 100%;
   height: 100%;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   box-sizing: border-box;
 }
 .grilla-responsive {
@@ -235,5 +234,31 @@ export default {
   justify-items: center;
   box-sizing: border-box;
   padding-bottom: 40px;
+}
+@media (min-width: 1234px) { 
+  .grilla-responsive{
+  grid-template-columns: repeat(auto-fit, minmax(259px, 0.46fr));
+  }
+  .barra-lateral{
+    height: 100%;
+  }
+}
+@media (max-width: 1233px) { 
+ .barra-lateral{
+    height: 100%;
+  }
+}
+@media (min-width: 1367px) { 
+  .grilla-responsive{
+  grid-template-columns: repeat(auto-fit, minmax(320px, 0.46fr));
+}
+.barra-lateral{
+    height: 100%;
+  }
+}
+@media (min-width: 1658px) { 
+.barra-lateral{
+    height: 51vw;
+  }
 }
 </style>
