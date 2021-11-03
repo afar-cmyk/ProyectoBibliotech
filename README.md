@@ -18,11 +18,9 @@ Este recurso nace de la unión de varios saberes y voluntades.
 <br/>
 
 Equipo de desarrollo:
-* [Andrés Felipe Alvarez](https://github.com/afar-cmyk)
-* [Esteban Castiblanco](https://github.com/Jesteban247)
-* [Luis Fernando Delgado](https://github.com/lufermaxi)
 * [Kelly Monroy Carrillo](https://github.com/muakarada)
-* [John Stiven Vasquez](https://github.com/jsstiven)
+* [Andrés Felipe Alvarez](https://github.com/afar-cmyk)
+* [Luis Fernando Delgado](https://github.com/lufermaxi)
 > Buenas lecturas :)
 
 
